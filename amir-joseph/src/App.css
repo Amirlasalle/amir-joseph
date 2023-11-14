@@ -123,6 +123,14 @@ img {
   text-align: center !important;
 }
 
+.home {
+  left: 0 !important;
+  right: 0 !important;
+  padding: 0 !important;
+  margin-right: 0 !important;
+  overflow: hidden;
+  width: 100vw !important;
+}
 
 /* ============== HOME-PAGE ========= */
 
@@ -222,6 +230,61 @@ nav a.active {
   background: var(--color-primary);
   color: var(--color-white);
 }
+
+
+
+/* ============== ABOUT ME ==================*/
+
+.about__container {
+  display: grid;
+  grid-template-columns: 35% 50%;
+  gap: 15%;
+}
+
+.about__me {
+  width: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 2rem;
+  background: linear-gradient(
+    45deg, 
+    transparent, 
+    var(--color-primary), 
+    transparent
+    );
+    display: grid;
+    place-items: center;
+}
+
+.about__me-image {
+  border-radius: 2rem;
+  overflow: hidden;
+  transform: rotate(10deg);
+  transition: var(--transition);
+}
+
+.about__me-image:hover {
+  transform: rotate(0);
+}
+
+.about__cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5;
+}
+
+.about-card {
+  background: var(--color-bg-variant);
+  border: 1px solid transparent;
+  border-radius: 1rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+
+
+
+
+
 /* .App {
   text-align: center;
 }
