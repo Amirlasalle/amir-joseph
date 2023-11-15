@@ -38,6 +38,7 @@ body {
   background: var(--color-bg);
   color: var(--color-white);
   line-height: 1.7;
+  font-family: 'Font Awesome 5 Free';
 }
 
 /* ====================== GENERAL STYLES ===================== */
@@ -237,8 +238,8 @@ nav a.active {
 
 .about__container {
   display: grid;
-  grid-template-columns: 35% 50%;
-  gap: 15%;
+  grid-template-columns: 30% 70%;
+  gap: 1.5rem;
 }
 
 .about__me {
@@ -248,11 +249,12 @@ nav a.active {
   background: linear-gradient(
     45deg, 
     transparent, 
-    var(--color-primary), 
+    rgba(255, 255, 113), 
     transparent
     );
     display: grid;
     place-items: center;
+    /* overflow: hidden; */
 }
 
 .about__me-image {
@@ -273,17 +275,195 @@ nav a.active {
 }
 
 .about-card {
-  background: var(--color-bg-variant);
+  width: 15rem;
+  background: var(--color-primary);
   border: 1px solid transparent;
   border-radius: 1rem;
   padding: 2rem;
   text-align: center;
+  margin: 1rem;
+}
+
+.about-card:hover {
+  background: transparent;
+  border-color: var(--color-primary-variant);
+}
+
+.major-cards {
+  width: 15rem !important;
+  height: 11rem;
+  background: var(--color-primary);
+  border: 1px solid transparent;
+  border-radius: 1rem;
+  text-align: center;
+  gap: 1.5;
+}
+
+.major-cards a {
+  z-index: 1000 !important;
+  background: transparent;
+  border-color: var(--color-primary-variant);
+}
+
+
+.major-cards:hover {
+  background: transparent;
+  border-color: var(--color-primary-variant);
+  filter: brightness(120%);
 }
 
 
 
+/* .slick-slide>div {
+  margin: 10px 2rem;
+  z-index: 2 !important;
+} */
+
+.slick-slide>div {
+  margin: 0 1rem;  /* Adjust the margin as needed */
+  z-index: 2 !important;
+}
 
 
+.slick-arrow.slick-next,
+.slick-arrow.slick-prev {
+  color: var(--color-primary);
+  background: var(--color-white);
+  margin-left: 3rem;
+  overflow: visible;
+  box-sizing: content-box;
+  opacity: 1;
+  margin-top: 0;
+  border-radius: 50%;
+  top: 0 !important;
+  z-index: 1;
+  height: 35px;
+  width: 35px;
+  font-size: 3rem !important;
+  box-shadow: 5px 5px 5px 0 rgba(51, 51, 51, .14), 0 1px 7px 0 rgba(51, 51, 51, .2);
+}
+.slick-arrow.slick-next{
+  left: 0;
+  margin-left: 5rem;
+
+}
+.slick-arrow.slick-next:hover,
+.slick-arrow.slick-prev:hover {
+  color: #ffffff !important;
+  background: var(--color-primary) !important;
+  opacity: 0.8;
+}
+
+.button__bar {
+  
+  position: absolute;
+  vertical-align: middle;
+  padding: 0;
+  background: none;
+  text-align: center;
+  width: 100%;
+  overflow: hidden;
+  display: none !important;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.show-it-750{
+  display: none;
+}
+.show-it-315{
+  display: none;
+}
+
+.history-img {
+  position: relative;
+  width: 100% !important;
+  height: 30vh !important;
+  bottom: 0 !important;
+  overflow: hidden;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.history-img::before {
+  content: "";
+  /* background-image: url('components/assets/Images/tokyostreetbright.jpg'); */
+  background: var(--color-primary);
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  /* filter: brightness(45%); */
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.history-text {
+  text-align: center !important;
+  justify-content: center !important;
+  color: var(--color-white);
+  position: relative;
+  z-index: 1;
+  height: 25vh;
+  overflow: auto;
+  margin: 0;
+  padding: 2rem !important;
+  padding-top: 0;
+  scroll-behavior: smooth;
+  
+}
+
+/* .button__bar li {
+  list-style: none;
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 0.5rem;
+  padding: 0;
+
+}
+
+.button__bar li button {
+  background-color: rgba(255, 255, 255, 0.88);
+  border: 1px solid #0033cc;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0;
+  height: 8px;
+  transition: width .3s;
+  width: 8px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.button__bar li.slick-active button {
+  background-color: #ce1127aa;
+  width: 3.5rem !important;
+  align-items: center;
+  animation: indicatorAnimation 3s;
+}
+
+.button__bar li button:hover,
+.button__bar li button:focus {
+  background: #FCD116;
+  outline: 0;
+}
+
+
+@keyframes indicatorAnimation {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(10%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+
+} */
 
 /* .App {
   text-align: center;
@@ -346,4 +526,35 @@ nav a.active {
   section>h2 {
     margin-top: 2rem;
   }
+}
+
+
+@media screen and (max-width: 750px) {
+  .hide-it-750 {
+    display: none;
+  }
+  .show-it-750 {
+    display: block;
+  }
+  .about__container {
+    display: grid;
+    grid-template-columns: 80% 0%;
+    gap: 1.5rem;
+  }
+  .about-text {
+    margin-bottom: .65rem !important;
+  }
+
+  section>h2 {
+    margin-top: 2rem;
+  }
+}
+
+@media screen and (max-width: 315px) {
+.show-it-315{
+  display: block;
+}
+.show-it-750 {
+  display: none;
+}
 }

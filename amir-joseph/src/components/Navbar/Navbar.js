@@ -3,6 +3,10 @@ import { Link, useNavigate } from 'react-router-dom';
 import '../../App.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAddressBook, faBook, faHandshake, faHouse, faUserCircle } from '@fortawesome/free-solid-svg-icons';
+
+
+
+
 const Navbar = () => {
 
     const [activeNav, setActiveNav ] = useState('/')

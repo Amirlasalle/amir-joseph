@@ -1,30 +1,3 @@
-// import logo from './logo.svg';
-// import './App.css';
-// import Header from './components/Header/Header';
-
-// function App() {
-//   return (
-//     <div className="App">
-
-//         <Header />
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-
-//     </div>
-//   );
-// }
-
-// export default App;
 import React from 'react';
 import { HashRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
@@ -37,7 +10,13 @@ import Services from './pages/Services'
 import Testimonials from './pages/Testimonials'
 import Resume from './pages/Resume'
 import Experiences from './pages/Experiences'
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fas } from '@fortawesome/free-solid-svg-icons';
+import { fab } from '@fortawesome/free-brands-svg-icons';
+import { far } from '@fortawesome/free-regular-svg-icons';
+import "react-bootstrap/dist/react-bootstrap.min.js";
 
+library.add(fas, fab, far);
 
 function App() {
   return (
