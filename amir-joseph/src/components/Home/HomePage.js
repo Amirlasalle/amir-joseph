@@ -36,15 +36,20 @@
 import React from 'react'
 import '../../App.css'
 import CTA from './CTA'
+import SpinningLogo from '../Logo/SpinningLogo'
 import ME from '../assets/Images/about-pic.PNG'
 import HeaderSocials from './HomePageSocials'
+import { Container } from 'react-bootstrap'
 
 const Header = () => {
     return (
-     
-            <div className='container header_container justify-around mb-5 pb-5'>
-                <div className='mt-5 justify-center'>
-                <h5 className='pl-0 text-center'>
+        
+        <div className="home">
+             <SpinningLogo />
+        <Container fluid secondary="true" className="d-flex flex-wrap justify-content-around home">
+        {/* <div className='container header_container justify-around mb-5 pb-5'> */}
+            <div className='mt-5 justify-center'>
+                <h5 className='pl-0 text-center '>
                     Hello I'm
                 </h5>
                 <h1 className='pl-0 text-center'>
@@ -55,16 +60,17 @@ const Header = () => {
                 </h5>
 
                 <CTA />
-</div>
-<div className='about__container p-5 mb-5'>
-            <HeaderSocials />
+            </div>
+            <div className='about__container p-5 mb-5'>
+                <HeaderSocials />
 
                 <div className='me'>
-                    <img src={ME} alt='me'/>
+                    <img src={ME} alt='me' />
                 </div>
-</div>
             </div>
-  
+        {/* </div> */}
+        </Container>
+    </div>
     )
 }
 

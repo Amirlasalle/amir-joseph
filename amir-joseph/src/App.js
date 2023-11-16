@@ -2,6 +2,7 @@ import React from 'react';
 import { HashRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import HomePage from './components/Home/HomePage';
+// import SpinningLogo from './components/Logo/SpinningLogo';
 import Navbar from './components/Navbar/Navbar';
 import AboutMe from './pages/AboutMe'
 import Contact from './pages/Contact'
@@ -23,6 +24,7 @@ function App() {
     <HashRouter >
 
       <div id='root' className="flex-column justify-flex-start min-100-vh">
+        {/* <SpinningLogo /> */}
         <Navbar />
         <Routes>
 

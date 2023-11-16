@@ -110,7 +110,7 @@ const AboutMe = () => {
                 </Container>
             </div>
 
-            <Container>
+            <Container className=''>
                 <div className='mt-1 about-img'>
                     <Row className=''>
                         <div className='about-text'>
