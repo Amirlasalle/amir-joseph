@@ -10,13 +10,13 @@ import Services from './pages/Services'
 import Testimonials from './pages/Testimonials'
 import Resume from './pages/Resume'
 import Experiences from './pages/Experiences'
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { fas } from '@fortawesome/free-solid-svg-icons';
-import { fab } from '@fortawesome/free-brands-svg-icons';
-import { far } from '@fortawesome/free-regular-svg-icons';
+import Hobbies from './pages/Hobbies'
+// import { library } from '@fortawesome/fontawesome-svg-core';
+// import { fas } from '@fortawesome/free-solid-svg-icons';
+// import { fab } from '@fortawesome/free-brands-svg-icons';
+// import { far } from '@fortawesome/free-regular-svg-icons';
 import "react-bootstrap/dist/react-bootstrap.min.js";
 
-library.add(fas, fab, far);
 
 function App() {
   return (
@@ -50,6 +50,9 @@ function App() {
           <Route path="/experiences" element={<Experiences />}
           />
 
+
+          <Route path="/hobbies" element={<Hobbies />}
+          />
 
         </Routes>
       </div>

@@ -67,7 +67,7 @@ const AboutMe = () => {
                 <h5 className='pl-5'>
                     Get To Know
                 </h5>
-                <h2 className='pl-5'>
+                <h2 className='pl-4'>
                     About Me
                 </h2>
                 <Link to='/contact' onClick={() => handleNavLinkClick('/contact')} className={activeNav === '/contact' ? 'active' : ''}>
@@ -88,18 +88,17 @@ const AboutMe = () => {
                     </div>
                 </div>
 
-                <Container fluid secondary="true" className="ml-20 mr-5 justify-around d-flex flex-wrap w-90 hide-it-750">
+                <Container fluid secondary="true" className="ml-20 mr-2 justify-around d-flex flex-wrap w-90 hide-it-750 blur">
                     <div className='slider-body mt-5 '>
                         <Slider {...settings} >
                             {aboutmecards.map((aboutmecard, key) => (
-                                <Card key={key} className="major-cards mt-5" >
+                                <Card key={key} className="about-cards-shadow mt-5" >
                                     <a href={aboutmecard.linkTo} target="_blank" rel="noreferrer" className="no-decoration">
                                         <Card.Body className='w-100 mt-2 ml-0 mr-0 '>
-                                            <Card.Subtitle className="mt-2 mb-2 card-subtitle text-white">
-                                                {aboutmecard.icon}
-                                            </Card.Subtitle>
-                                            <Card.Title className="mt-2 mb-2 card-subtitle text-white"><h4 className='pl-0'>{aboutmecard.title}</h4></Card.Title>
-                                            <Card.Subtitle className="mt-2 mb-2 card-subtitle text-white">{aboutmecard.subtitle}
+                                            <Card.Title className="mt-2 mb-2 about-card-title text-white text-xx-large" dangerouslySetInnerHTML={{ __html: aboutmecard.icon }}>
+                                            </Card.Title>
+                                            <Card.Title className="mt-2 mb-2 about-card-subtitles text-white"><h4 className='pl-0'>{aboutmecard.title}</h4></Card.Title>
+                                            <Card.Subtitle className="mt-2 mb-2 about-card-subtitles text-white">{aboutmecard.subtitle}
                                             </Card.Subtitle>
                                         </Card.Body>
                                     </a>
@@ -112,29 +111,31 @@ const AboutMe = () => {
             </div>
 
             <Container>
-                <div className='mt-1 history-img'>
+                <div className='mt-1 about-img'>
                     <Row className=''>
-                        <div className='history-text'>
-                            <p className='d-flex flex-column justify-center history-para pl-0'>
+                        <div className='about-text'>
+                            <p className='d-flex flex-column justify-center about-para pl-0'>
                                 👋 Hi, I'm Amir, a passionate Software Developer specializing in fullstack software development. With 2+ years of coding experience, I've crafted solutions for projects like Venture Villa. I'm on a constant quest for clean code and elegant solutions. Let's turn your ideas into functional reality together!
                             </p>
                         </div>
                     </Row>
                 </div>
             </Container>
-            <Row className='mb-25 mt-5'>
-                <Container fluid secondary="true" className=" ml-5 justify-around d-flex flex-wrap w-90 show-it-750">
+            <Row className='mt-20'>
+                <Container fluid secondary="true" className=" ml-5 justify-around d-flex flex-wrap w-90 show-it-750 blur">
                     <div className='slider-body'>
                         <Slider {...settings} >
                             {aboutmecards.map((aboutmecard, key) => (
-                                <Card key={key} className="major-cards mt-5" >
+                                <Card key={key} className="about-cards-shadow mt-5" >
                                     <a href={aboutmecard.linkTo} target="_blank" rel="noreferrer" className="no-decoration">
                                         <Card.Body className='w-100 mt-2 ml-0 mr-0 '>
-                                            <Card.Subtitle className="mt-2 mb-2 card-subtitle text-white">
+                                            {/* <Card.Subtitle className="mt-2 mb-2 about-card-subtitles text-white">
                                                 {aboutmecard.icon}
-                                            </Card.Subtitle>
-                                            <Card.Title className="mt-2 mb-2 card-subtitle text-white"><h4 className='pl-0'>{aboutmecard.title}</h4></Card.Title>
-                                            <Card.Subtitle className="mt-2 mb-2 card-subtitle text-white">{aboutmecard.subtitle}
+                                            </Card.Subtitle> */}
+                                            <Card.Title className="mt-2 mb-2 about-card-title text-white text-xx-large" dangerouslySetInnerHTML={{ __html: aboutmecard.icon }}></Card.Title>
+
+                                            <Card.Title className="mt-2 mb-2 about-card-subtitles text-white"><h4 className='pl-0'>{aboutmecard.title}</h4></Card.Title>
+                                            <Card.Subtitle className="mt-2 mb-2 about-card-subtitles text-white">{aboutmecard.subtitle}
                                             </Card.Subtitle>
 
 
@@ -147,16 +148,18 @@ const AboutMe = () => {
                 </Container>
             </Row>
             <Row className='mb-25 mt-5'>
-                <Container fluid secondary="true" className=" ml-5 justify-around d-flex flex-wrap w-90 show-it-315">
-                    <div className='slider-body'>
+                <Container fluid secondary="true" className="justify-around d-flex flex-wrap w-100 show-it-315">
+                    <div className='justify-around slider-body'>
                         <Slider {...settingsTwo} >
                             {aboutmecards.map((aboutmecard, key) => (
-                                <Card key={key} className="major-cards mt-5" >
+                                <Card key={key} className="about-cards mt-5" >
                                     <a href={aboutmecard.linkTo} target="_blank" rel="noreferrer" className="no-decoration">
                                         <Card.Body className='w-100 mt-2 ml-0 mr-0 '>
-                                            <Card.Subtitle className="mt-2 mb-2 card-subtitle text-white">{aboutmecard.icon}</Card.Subtitle>
-                                            <Card.Title className="mt-2 mb-2 card-subtitle text-white"><h4 className='pl-0'>{aboutmecard.title}</h4></Card.Title>
-                                            <Card.Subtitle className="mt-2 mb-2 card-subtitle text-white">{aboutmecard.subtitle}
+                                            {/* <Card.Subtitle className="mt-2 mb-2 about-card-subtitles text-white">{aboutmecard.icon}</Card.Subtitle> */}
+                                            <Card.Title className="mt-2 mb-2 about-card-title text-white text-xx-large" dangerouslySetInnerHTML={{ __html: aboutmecard.icon }}>
+                                            </Card.Title>
+                                            <Card.Title className="mt-2 mb-2 about-card-subtitles text-white"><h4 className='pl-0'>{aboutmecard.title}</h4></Card.Title>
+                                            <Card.Subtitle className="mt-2 mb-2 about-card-subtitles text-white">{aboutmecard.subtitle}
                                             </Card.Subtitle>
 
 
