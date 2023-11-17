@@ -1,11 +1,11 @@
-import React, { useState  } from 'react';
-// import { Link, useNavigate } from 'react-router-dom';useContext useAccordionButton, AccordionContext, Button,faChevronDown, faChevronUp,
+import React, { useState } from 'react';
+// import { Link, useNavigate } from 'react-router-dom';useContext Accordion, useAccordionButton, AccordionContext, Button,faChevronDown, faChevronUp,
 import '../App.css'
 import '../index.css'
 import projectsData from "../components/Jsons/projects.json";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {  faChevronCircleRight, faChevronCircleLeft } from '@fortawesome/free-solid-svg-icons';
-import { Container, Card, Accordion, Image } from 'react-bootstrap';
+import { faChevronCircleRight, faChevronCircleLeft } from '@fortawesome/free-solid-svg-icons';
+import { Container, Card,  Image } from 'react-bootstrap';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -171,44 +171,44 @@ const Experiences = () => {
 
 
 
-            <Container fluid secondary="true" className="d-flex flex-wrap justify-center p-10">
-                <Accordion style={{ width: '100%' }}>
+            <Container fluid secondary="true" className="d-flex flex-wrap justify-center mt-20 p-10">
+                {/* <Accordion style={{ width: '100%' }}>
                     <Card className='projects'>
-                        <Card.Header className='projects-header mb-10'>
-                            <div className='header-content'>
+                        <Card.Header className='projects-header mb-10'> */}
+                            <div className='header-content pb-2'>
                                 {/* <ContextAwareToggle eventKey="1" className='icon-small' /> */}
-                                <h4 id="category-title" className="category-title pb-5">
+                                <h4 id="category-title" className="category-title text-center align-center">
                                     Experience the Live Deployments of My Latest Projects
                                 </h4>
                             </div>
-                        </Card.Header>
-                        <Accordion.Collapse eventKey="1" className="m-auto" style={{ width: '100%' }}>
-                            <Card.Body className=" projects-card-body m-auto blur2" style={{ width: '100%' }}>
-                                <div className='slider-body mt-10'>
+                            <div className='header-content'>
+                            <p className='text-light text-small justify-center align-center'>(hover for description)</p>
+                            </div>
+                        {/* </Card.Header> */}
+                        {/* <Accordion.Collapse eventKey="1" className="m-auto" style={{ width: '100%' }}>
+                            <Card.Body className=" projects-card-body m-auto blur2" style={{ width: '100%' }}> */}
+                                <div className='slider-body blur2 mt-10'>
                                     <Slider {...settings} >
                                         {projects.map((project, key) => (
                                             <a href={project.more} target="_blank" rel="noreferrer" className="btn1" >
-                                                <Card key={key} className="project-cards project-card-container" >
+                                                   <Card key={key} className="project-card" >
                                                     <Card.Body className='w-100'>
-                                                        <Image src={process.env.PUBLIC_URL + project.screenShot} className='project-image' />
-                                                        {/* <div className='card-description'> */}
-                                                        {/* <Card.Title className="card-titles">
-                                                                <h4 className='pl-0'>
-                                                                {project.name}</h4>
-                                                                </Card.Title>
-                                                           </div>*/}  <Card.Subtitle className="mb-2 card-subtitles">  <h4 className='pl-0 text-black'>
-                                                            {project.name}</h4>{project.subtitle}</Card.Subtitle>
-
+                                                        <Image src={process.env.PUBLIC_URL + project.screenShot} />
+                                                        <Card.Subtitle className="mb-2 project-text">
+                                                            <h4 className='pl-0 text-black'>
+                                                            {project.name}</h4>
+                                                            <span>{project.subtitle}</span>
+                                                            </Card.Subtitle>
                                                     </Card.Body>
                                                 </Card>
                                             </a>
                                         ))}
                                     </Slider>
                                 </div>
-                            </Card.Body>
+                            {/* </Card.Body>
                         </Accordion.Collapse>
                     </Card>
-                </Accordion>
+                </Accordion> */}
             </Container>
         </div>
     );

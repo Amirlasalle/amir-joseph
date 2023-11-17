@@ -19,7 +19,6 @@
   --color-light: rgba(255, 255, 255, 0.6);
   --color-yellow-light: rgba(255, 255, 113);
   --transition: all 400ms ease;
-
   --container-width-lg: 75%;
   --container-width-md: 86%;
   --container-width-sm: 90%;
@@ -42,6 +41,95 @@ body {
 }
 
 /* ====================== GENERAL STYLES ===================== */
+
+.App {
+  width: 10rem;
+  height: 10rem;
+  background: rgba(0, 0, 0, 0);
+  width: max-content;
+  display: block;
+  padding: 1rem 1rem;
+  z-index: 0;
+  position: absolute;
+  bottom: 3rem;
+  display: flex;
+  border-radius: 3rem;
+}
+
+.logo-container {
+  width: 10rem;
+  height: 10rem;
+  background: rgba(0, 0, 0, 0);
+  width: max-content;
+  display: block;
+  padding: 1rem 1rem;
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  display: flex;
+  border-radius: 3rem;
+}
+
+.App-logo {
+  position: absolute;
+  margin-top: 1rem;
+  float: right;
+  height: 20vmin;
+  width: 20vmin;
+  pointer-events: none;
+  justify-content: flex-end;
+  z-index: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.blur2 {
+  position: relative;
+}
+
+.blur2::before {
+  content: "";
+  width: 8%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 1;
+  left: -5px;
+  background: linear-gradient(to right,
+      var(--color-bg),
+      rgba(255, 255, 255, 0));
+  filter: blur(8px);
+}
+
+.blur2::after {
+  content: "";
+  height: 100%;
+  width: 8%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 1;
+  right: -5px;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), var(--color-bg));
+  filter: blur(10px);
+}
 
 .container {
   width: var(--container-width-lg);
@@ -88,7 +176,7 @@ a:hover {
   color: var(--color-white);
 }
 
-.btn {
+/* .btn {
   width: max-content;
   display: inline-block;
   color: var(--color-primary);
@@ -103,7 +191,7 @@ a:hover {
   background: var(--color-white);
   color: var(--color-bg);
   border-color: transparent;
-}
+} */
 
 .btn-primary {
   background: var(--color-primary);
@@ -162,42 +250,44 @@ header {
 
 .header__socials {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
   gap: 0.8rem;
-  position: absolute;
-  left: 0;
-  padding-left: 2rem;
+  margin-bottom: 1rem;
+  position: relative;
+  padding-left: 0;
   z-index: 2;
 }
 
 .header__socials::before {
   content: "";
-  margin-top: 5.5rem;
-  width: 1px;
-  height: 3rem;
+  width: 100%;
+  height: 1px;
   background: var(--color-primary);
 }
 
 
 .header__socials::after {
   content: "";
-  width: 1px;
-  height: 3rem;
+  width: 100%;
+  height: 1px;
   background: var(--color-primary);
 }
 
 .me {
   background: linear-gradient(var(--color-primary), transparent);
-  width: 22rem;
-  height: 20.5rem;
+  width: 25rem;
+  height: 22.5rem;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
   margin-top: 2rem;
   overflow: hidden;
+  display: inline-block;
 
 }
+
 
 
 /* =============== NAVBAR ======================== */
@@ -207,11 +297,11 @@ nav {
   width: max-content;
   display: block;
   padding: 0.7rem 1.7rem;
-  z-index: 3;
+  z-index: 999;
   position: fixed;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 1.8rem;
+  bottom: 1.5rem;
   display: flex;
   gap: 0.8rem;
   border-radius: 3rem;
@@ -496,56 +586,7 @@ nav a.active {
   font-family: 'Poppins', sans-serif;
 }
 
-/* .button__bar li {
-  list-style: none;
-  cursor: pointer;
-  display: inline-block;
-  margin: 0 0.5rem;
-  padding: 0;
 
-}
-
-.button__bar li button {
-  background-color: rgba(255, 255, 255, 0.88);
-  border: 1px solid #0033cc;
-  border-radius: 10px;
-  cursor: pointer;
-  font-size: 0;
-  height: 8px;
-  transition: width .3s;
-  width: 8px;
-  padding-left: 0;
-  padding-right: 0;
-}
-
-.button__bar li.slick-active button {
-  background-color: #ce1127aa;
-  width: 3.5rem !important;
-  align-items: center;
-  animation: indicatorAnimation 3s;
-}
-
-.button__bar li button:hover,
-.button__bar li button:focus {
-  background: #FCD116;
-  outline: 0;
-}
-
-
-@keyframes indicatorAnimation {
-  0% {
-    transform: translateX(0);
-  }
-
-  50% {
-    transform: translateX(10%);
-  }
-
-  100% {
-    transform: translateX(0%);
-  }
-
-} */
 
 /* =================== EXPERIENCES =================== */
 
@@ -602,9 +643,12 @@ nav a.active {
   border: none !important;
 }
 
-.projects-header .header-content {
+
+.header-content {
   display: flex;
-  align-items: center;
+  align-items: center !important;
+  text-align: center;
+  justify-content: center;
 }
 
 .icon-small {
@@ -644,8 +688,7 @@ nav a.active {
   height: auto;
 }
 
-
-.project-cards {
+.project-card {
   position: relative;
   width: 18rem !important;
   height: 20rem;
@@ -654,115 +697,60 @@ nav a.active {
   border-radius: 1rem;
   overflow: hidden;
   margin-top: 2rem;
-  z-index: -1;
 }
 
-.project-image {
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-}
-
-.card-subtitles {
-  color: var(--color-bg-variant);
-  font-weight: 900;
-  font-family: 'Poppins', sans-serif;
-  z-index: 1;
-  backdrop-filter: blur(3px);
-  border-radius: 0;
-  border: 0 solid transparent;
+.project-card::before {
+  content: "";
   background: #00000011;
+  opacity: 0.85;
   position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 1;
-  text-align: center;
+  width: 100%;
+  height: 0;
+  transition: 0.4s ease-in-out;
+  backdrop-filter: blur(3px);
 }
 
-.blur2 {
-  position: relative;
-}
-
-.blur2::before {
-  content: "";
-  width: 8%;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  pointer-events: none;
-  z-index: 1;
-  left: -5px;
-  background: linear-gradient(to right,
-      var(--color-bg),
-      rgba(255, 255, 255, 0));
-  filter: blur(8px);
-}
-
-.blur2::after {
-  content: "";
+.project-card:hover::before {
   height: 100%;
-  width: 8%;
+}
+
+.project-text {
   position: absolute;
-  top: 0;
-  bottom: 0;
-  pointer-events: none;
-  z-index: 1;
-  right: -5px;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0), var(--color-bg));
-  filter: blur(10px);
+  text-align: center;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.5s ease-in-out;
+  opacity: 0;
+  width: 100%;
 }
 
-
-
-.App {
-  width: 20vmin;
-  background: rgba(0, 0, 0, 0);
-  width: max-content;
-  display: block;
-  padding: 1rem 1rem;
-  z-index: 0;
-  position: absolute;
-  right: 0;
-  bottom: 3rem;
-  display: flex;
-  gap: 0.8rem;
-  border-radius: 3rem;
-  /* filter: brightness(90%);
-  -webkit-filter: brightness(90%);
-  -moz-filter: brightness(90%);
-  -o-filter: brightness(90%);
-  -ms-filter: brightness(90%); */
+.project-card:hover .project-text {
+  top: 50%;
+  opacity: 1;
 }
 
-.App-logo {
-  margin-top: 2rem;
-  height: 20vmin;
-  width: 20vmin;
-  pointer-events: none;
-  justify-content: flex-end;
-  z-index: 0;
+.project-text h4 {
+  font-size: 30px;
+  font-weight: 900;
+  letter-spacing: 0.8px;
+  line-height: 1.1em;
+  color: #000;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.project-text span {
+  font-weight: bold;
+  font-size: 15px;
+  letter-spacing: 0.8px;
+  color: var(--color-bg-variant);
 }
 
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/*============= testing ============ */
+.home-img{
+  box-shadow: 5px 5px 10px 0 rgba(255, 255, 113),
+  0 1px 7px 0 rgba(255, 255, 113);;
+  background-color: #18186b;
 }
-
-
 
 /* ================= MEDIA QUERIES (MEDIUM DEVICES) ====================== */
 
@@ -812,35 +800,31 @@ nav a.active {
   }
 
 }
-@media screen and (max-width: 650px) {
-.App {
-  width: 10vmin;
-  background: rgba(0, 0, 0, 0);
-  width: max-content;
-  display: block;
-  padding: 1rem 1rem;
-  z-index: 0;
-  position: absolute;
-  right: 0;
-  bottom: 3rem;
-  display: flex;
-  gap: 0.8rem;
-  border-radius: 3rem;
-  /* filter: brightness(90%);
-  -webkit-filter: brightness(90%);
-  -moz-filter: brightness(90%);
-  -o-filter: brightness(90%);
-  -ms-filter: brightness(90%); */
-}
 
-.App-logo {
-  margin-top: 2rem;
-  height: 10vmin;
-  width: 10vmin;
-  pointer-events: none;
-  justify-content: flex-end;
-  z-index: 0;
-}
+@media screen and (max-width: 600px) {
+
+  .logo-container {
+    width: 5vh;
+    height: 5vw;
+    background: rgba(0, 0, 0, 0);
+    display: block;
+    padding: 1rem 1rem;
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    display: flex;
+    border-radius: 3rem;
+  }
+  
+  .App-logo {
+    position: absolute;
+    margin-top: 1rem;
+    height: 7vmin;
+    width: 7vmin;
+    pointer-events: none;
+    justify-content: center;
+    z-index: 0;
+  }
 }
 
 @media screen and (max-width: 750px) {

@@ -4,7 +4,7 @@ import LOGO from '../assets/Icons/logo.svg'
 import { Image } from 'react-bootstrap'
 function SpinningLogo() {
   return (
-    <div className="App">
+    <div className="logo-container">
 
     <Image src= {LOGO} className="App-logo" alt="logo" />
 
