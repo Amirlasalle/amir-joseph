@@ -515,6 +515,7 @@ p {
   font-size: 1.05rem;
   margin: 0 0 1rem;
   line-height: 1.5;
+  font-family: 'Poppins', sans-serif !important; 
 }
 
 ul,
@@ -1067,7 +1068,7 @@ a:hover {
 }
 
 .text-primary {
-  color: #2d3e50 !important;
+  color: var(--color-primary) !important;
 }
 
 .text-info {
