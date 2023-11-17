@@ -288,7 +288,11 @@ header {
 
 }
 
-
+.home-img{
+  box-shadow: 5px 5px 10px 0 rgba(255, 255, 113),
+  0 1px 7px 0 rgba(255, 255, 113);;
+  background-color: #18186b;
+}
 
 /* =============== NAVBAR ======================== */
 
@@ -746,11 +750,7 @@ nav a.active {
 }
 
 /*============= testing ============ */
-.home-img{
-  box-shadow: 5px 5px 10px 0 rgba(255, 255, 113),
-  0 1px 7px 0 rgba(255, 255, 113);;
-  background-color: #18186b;
-}
+
 
 /* ================= MEDIA QUERIES (MEDIUM DEVICES) ====================== */
 
@@ -801,7 +801,7 @@ nav a.active {
 
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 680px) {
 
   .logo-container {
     width: 5vh;
@@ -859,4 +859,10 @@ nav a.active {
   .show-it-750 {
     display: none;
   }
+}
+
+@media screen and (max-width: 450px) {
+.logo-container{
+  display: none;
+}
 }
