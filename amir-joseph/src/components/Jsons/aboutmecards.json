@@ -1,38 +1,38 @@
 [
     {
         "title": "Experience",
-        "linkTo": "https://ingenieria.bogota.unal.edu.co/en/programs/master/master-s-degree-in-mechanical-engineering.html",
-        "subtitle": "4+ Years of Work Experience",
+        "linkTo": "/experiences",
+        "subtitle": "Explore my expertise and accomplishments",
         "icon": "&#127942;"
     },
     {
         "title": "Clients",
-        "linkTo": "https://ingenieria.bogota.unal.edu.co/en/programs/master/master-s-degree-in-mechanical-engineering.html",
-        "subtitle": "+2 Very Satisfied Clients",
+        "linkTo": "/testimonials",
+        "subtitle": "2+ Very Satisfied Clients",
         "icon": "&#128101;"
     },
     {
         "title": "Projects",
-        "linkTo": "https://ingenieria.bogota.unal.edu.co/en/programs/master/master-s-degree-in-mechanical-engineering.html",
+        "linkTo": "/portfolio",
         "subtitle": "30+ Completed Projects",
         "icon": "&#128193;"
     },
     {
         "title": "Resume",
-        "linkTo": "https://ingenieria.bogota.unal.edu.co/en/programs/master/master-s-degree-in-mechanical-engineering.html",
+        "linkTo": "/resume",
         "subtitle": "4+ Years of Work Experience",
         "icon": "&#128196;"
     },
     {
         "title": "Testimonials",
-        "linkTo": "https://ingenieria.bogota.unal.edu.co/en/programs/master/master-s-degree-in-mechanical-engineering.html",
-        "subtitle": "+2 Very Satisfied Clients",
+        "linkTo": "/testimonials",
+        "subtitle": "See what my network has to say about me!",
         "icon": "&#128483;"
     },
     {
         "title": "Hobbies",
-        "linkTo": "https://ingenieria.bogota.unal.edu.co/en/programs/master/master-s-degree-in-mechanical-engineering.html",
-        "subtitle": "30+ Completed Projects",
+        "linkTo": "/hobbies",
+        "subtitle": "Get to know what I love to do outside my profession",
         "icon": "&#127859;"
     }
 ]

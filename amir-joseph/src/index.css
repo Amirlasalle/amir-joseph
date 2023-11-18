@@ -515,7 +515,7 @@ p {
   font-size: 1.05rem;
   margin: 0 0 1rem;
   line-height: 1.5;
-  font-family: 'Poppins', sans-serif !important; 
+  font-family: 'Poppins', sans-serif !important;
 }
 
 ul,
@@ -910,6 +910,18 @@ a:hover {
   padding-bottom: 1.625rem !important;
 }
 
+.pb-10 {
+  padding-bottom: 3.5rem !important;
+}
+
+.pb-15 {
+  padding-bottom: 8.875rem !important;
+}
+
+.pb-20 {
+  padding-bottom: 6.5rem !important;
+}
+
 /* padding-top */
 .pt-0 {
   padding-top: 0 !important;
@@ -1169,11 +1181,14 @@ a:hover {
 .display-flex {
   display: flex !important;
 }
+
 .button-container {
   display: flex;
   align-items: center;
-  justify-content: center; /* Optional: Center horizontally */
-  height: 20vh; /* Adjust the height as needed */
+  justify-content: center;
+  /* Optional: Center horizontally */
+  height: 20vh;
+  /* Adjust the height as needed */
 }
 
 .btn7 {

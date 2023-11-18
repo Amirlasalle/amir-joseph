@@ -16,7 +16,6 @@ const AboutMe = () => {
 
     const [aboutmecards] = useState(aboutmecardsData);
 
-    const [activeNav, setActiveNav] = useState('/')
 
     const navigate = useNavigate();
 
@@ -32,7 +31,6 @@ const AboutMe = () => {
     const handleNavLinkClick = (url) => {
         scrollToTop();
         navigate(url);
-        setActiveNav(url);
     };
 
     const settings = {
@@ -70,7 +68,7 @@ const AboutMe = () => {
                 <h2 className='pl-4'>
                     About Me
                 </h2>
-                <Link to='/contact' onClick={() => handleNavLinkClick('/contact')} className={activeNav === '/contact' ? 'active' : ''}>
+                <Link to='/contact' onClick={() => handleNavLinkClick('/contact')} >
                     <Button className='btn btn-primary mt-2 ml-5'>
 
                         Lets Talk
@@ -93,15 +91,16 @@ const AboutMe = () => {
                         <Slider {...settings} >
                             {aboutmecards.map((aboutmecard, key) => (
                                 <Card key={key} className="about-cards-shadow mt-5" >
-                                    <a href={aboutmecard.linkTo} target="_blank" rel="noreferrer" className="no-decoration">
+                                    <Link to={aboutmecard.linkTo} onClick={() => handleNavLinkClick(aboutmecard.linkTo)}>
+                                    {/* <Link to={aboutmecard.linkTo} target="_blank" rel="noreferrer" className="no-decoration"> */}
                                         <Card.Body className='w-100 mt-2 ml-0 mr-0 '>
-                                            <Card.Title className="mt-2 mb-2 about-card-title text-white text-xx-large" dangerouslySetInnerHTML={{ __html: aboutmecard.icon }}>
+                                            <Card.Title className="mb-2 about-card-title text-white text-xx-large" dangerouslySetInnerHTML={{ __html: aboutmecard.icon }}>
                                             </Card.Title>
-                                            <Card.Title className="mt-2 mb-2 about-card-subtitles text-white"><h4 className='pl-0'>{aboutmecard.title}</h4></Card.Title>
-                                            <Card.Subtitle className="mt-2 mb-2 about-card-subtitles text-white">{aboutmecard.subtitle}
+                                            <Card.Title className="about-card-subtitles text-white"><h4 className='pl-0'>{aboutmecard.title}</h4></Card.Title>
+                                            <Card.Subtitle className="about-card-subtitles text-white">{aboutmecard.subtitle}
                                             </Card.Subtitle>
                                         </Card.Body>
-                                    </a>
+                                    </Link>
                                 </Card>
                             ))}
                         </Slider>
@@ -132,10 +131,10 @@ const AboutMe = () => {
                                             {/* <Card.Subtitle className="mt-2 mb-2 about-card-subtitles text-white">
                                                 {aboutmecard.icon}
                                             </Card.Subtitle> */}
-                                            <Card.Title className="mt-2 mb-2 about-card-title text-white text-xx-large" dangerouslySetInnerHTML={{ __html: aboutmecard.icon }}></Card.Title>
+                                            <Card.Title className="mb-2 about-card-title text-white text-xx-large" dangerouslySetInnerHTML={{ __html: aboutmecard.icon }}></Card.Title>
 
-                                            <Card.Title className="mt-2 mb-2 about-card-subtitles text-white"><h4 className='pl-0'>{aboutmecard.title}</h4></Card.Title>
-                                            <Card.Subtitle className="mt-2 mb-2 about-card-subtitles text-white">{aboutmecard.subtitle}
+                                            <Card.Title className=" mb-1 about-card-subtitles text-white"><h4 className='pl-0'>{aboutmecard.title}</h4></Card.Title>
+                                            <Card.Subtitle className=" about-card-subtitles text-white">{aboutmecard.subtitle}
                                             </Card.Subtitle>
 
 

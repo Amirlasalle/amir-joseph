@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
+
 * {
   margin: 0;
   padding: 0;
@@ -422,6 +423,7 @@ nav a.active {
   gap: 1.5;
   box-shadow: 5px 5px 10px 0 rgba(255, 255, 113),
     0 1px 7px 0 rgba(255, 255, 113);
+  margin-bottom: 1.65rem;
 }
 
 .about-cards-shadow a {
@@ -692,7 +694,11 @@ nav a.active {
 .accordion-collapse {
   height: auto;
 }
+.project-card-a {
+  width: 18rem !important;
+  height: 20rem;
 
+}
 .project-card {
   position: relative;
   width: 18rem !important;
@@ -755,8 +761,8 @@ nav a.active {
 /*============= SERVICES ============ */
 
 .services__container{
-  display: row;
-  grid-template-columns: repeat(3, 1fr);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
 
 }
@@ -767,7 +773,7 @@ nav a.active {
   border: 1px solid var(--color-primary);
   height: fit-content;
   transition: var(--transition);
-  margin: 2rem;
+  margin: 1rem;
 }
 
 .service:hover {
@@ -785,7 +791,7 @@ nav a.active {
 
 .service__head {
   color: var(--color-bg) !important;
-  font-size: 1rem;
+  font-size: 1.25rem;
   text-align: center;
 }
 
@@ -806,6 +812,144 @@ nav a.active {
 
 .service__list-txt {
   font-size: 0.9rem;
+}
+
+
+
+/*   =================== PORTFOLIO ================= */
+.cards-bg {
+
+  overflow: hidden;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.portfolio-cards__container {
+  display: grid;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.product-cards {
+  background-color: #ffffff;
+  background: none !important;
+  border: none !important;
+  margin: 5px;
+}
+
+.product-cards:hover {
+  transform: translateY(-10px) scale(1.009) translateZ(10px);
+}
+
+
+.product-cards .carousel-control-next,
+.product-cards .carousel-control-prev {
+  display: none !important;
+  color: #fff;
+  filter: brightness(150%) !important;
+  font-weight: bold !important;
+  opacity: .9;
+  top: 60%;
+  transform: translateY(-50%);
+}
+
+.product-cards:hover .carousel-control-next,
+.product-cards:hover .carousel-control-prev {
+  display: inline !important;
+  filter: brightness(100%) !important;
+  font-weight: bold !important;
+}
+
+
+.carousel-control-next:hover,
+.carousel-control-prev:hover {
+  opacity: 0.5;
+}
+
+.carousel-indicators .active {
+  background-color: rgb(255, 255, 255);
+  opacity: 1;
+  filter: brightness(170%) !important;
+}
+
+
+.carousel-indicators {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  justify-content: center;
+  padding: 0;
+}
+
+.card-titles {
+  color: #000;
+  font-weight: bold;
+}
+
+.card-price {
+  color: #000;
+  font-weight: bold;
+}
+
+.night {
+  color: #000;
+  font-weight: lighter !important;
+}
+
+.rating {
+  float: right;
+  color: #000;
+  font-weight: lighter !important;
+}
+
+.carousel-indicators [data-bs-target] {
+  display: flex !important;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  justify-content: center;
+  padding: 0;
+}
+
+.carousel-indicators [data-bs-target] {
+  width: 8px !important;
+  height: 8px !important;
+  border-radius: 50% !important;
+  margin: 0 5px;
+}
+
+.carousel-indicators {
+  z-index: 1 !important;
+}
+
+/* .cards-image {
+  width: 100vw !important;
+  height: 42vh !important;
+  object-fit: cover;
+  border-radius: 10px;
+} */
+.project {
+  padding: 80px 0;
+  position: relative;
+  background-color: black;
+}
+.project h2 {
+	font-size: 45px;
+	font-weight: 700;
+  text-align: center;
+}
+.project p {
+  color: #B8B8B8;
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  line-height: 1.5em;
+  margin: 14px auto 30px auto;
+  text-align: center;
+  width: 56%;
 }
 
 /*============= testing ============ */
@@ -838,6 +982,13 @@ nav a.active {
 
 }
 
+@media screen and (max-width: 700px) {
+.services__container{
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+}
+}
 /* ================= MEDIA QUERIES (SMALL DEVICES) ====================== */
 
 @media screen and (max-width: 600px) {

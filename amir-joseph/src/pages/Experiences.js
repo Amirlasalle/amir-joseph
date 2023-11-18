@@ -172,11 +172,9 @@ const Experiences = () => {
 
 
             <Container fluid secondary="true" className="d-flex flex-wrap justify-center mt-20 p-10">
-                {/* <Accordion style={{ width: '100%' }}>
-                    <Card className='projects'>
-                        <Card.Header className='projects-header mb-10'> */}
+
                             <div className='header-content pb-2'>
-                                {/* <ContextAwareToggle eventKey="1" className='icon-small' /> */}
+                         
                                 <h4 id="category-title" className="category-title text-center align-center">
                                     Experience the Live Deployments of My Latest Projects
                                 </h4>
@@ -184,9 +182,6 @@ const Experiences = () => {
                             <div className='header-content'>
                             <p className='text-light text-small justify-center align-center'>(hover for description)</p>
                             </div>
-                        {/* </Card.Header> */}
-                        {/* <Accordion.Collapse eventKey="1" className="m-auto" style={{ width: '100%' }}>
-                            <Card.Body className=" projects-card-body m-auto blur2" style={{ width: '100%' }}> */}
                                 <div className='slider-body blur2 mt-10'>
                                     <Slider {...settings} >
                                         {projects.map((project, key) => (
@@ -205,10 +200,7 @@ const Experiences = () => {
                                         ))}
                                     </Slider>
                                 </div>
-                            {/* </Card.Body>
-                        </Accordion.Collapse>
-                    </Card>
-                </Accordion> */}
+                        
             </Container>
         </div>
     );
