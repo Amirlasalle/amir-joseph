@@ -1,50 +1,74 @@
 [
     {
+        "key": "0",
         "name": "Venture Villa",
         "subtitle": "A comprehensive FullStack application providing the ultimate travel guide experience for exploring the wonders of Colombia.",
         "screenShot": "/Images/venture-villa-logo.png",
-        "more": "https://venture-villa-app-f0af34deb85d.herokuapp.com/"
+        "deployment":"https://venture-villa-app-f0af34deb85d.herokuapp.com/",
+        "github":"https://github.com/Amirlasalle/venture-villa"
     },
     {
+        "key": "1",
         "name": "ASCO Study Center",
         "subtitle": "React APP tailored for the SDPs at ASCO designed to facilitate knowledge acquisition and information access.",
         "screenShot": "/Images/sdp-screenshot.png",
-        "more": "https://amirlasalle.github.io/asco-study-center/"
+        "deployment":"https://amirlasalle.github.io/asco-study-center/",
+        "github":"https://github.com/Amirlasalle/asco-study-center"
     },
     {
+        "key": "2",
         "name": "Group Awesome's Movie Generator",
         "subtitle": "Discover the world of cinema with ease. This app empowers you to access information on your favorite movies, check nearby theaters, and access showtime schedules.",
         "screenShot": "/Images/groupAwesomeMovieApp.png",
-        "more": "https://pvlln.github.io/project1-group-awesome/"
+        "deployment":"https://pvlln.github.io/project1-group-awesome/",
+        "github":"https://github.com/pvlln/project1-group-awesome"
     },
     {
+        "key": "3",
         "name": "Mealy App",
         "subtitle": "Stay organized and plan your meals efficiently with the Mealy App. Simplify your weekly meal scheduling for a stress-free dining experience.",
         "screenShot": "/Images/mealyApp.png",
-        "more": "https://mealy-app-dcae3e02089d.herokuapp.com/login"
+        "deployment":"https://mealy-app-dcae3e02089d.herokuapp.com/login",
+        "github":"https://github.com/erikchiodo/weekly-meal-planner-project"
     },
     {
+        "key": "4",
         "name": "Weather Dashboard",
         "subtitle": "Experience real-time weather updates for major and minor cities with this weather dashboard, powered by a third-party API.",
         "screenShot": "/Images/weatherApp.png",
-        "more": "https://amirlasalle.github.io/weather_dashboard/"
+        "deployment":"https://amirlasalle.github.io/weather_dashboard/",
+        "github":"https://github.com/Amirlasalle/weather_dashboard"
     },
     {
+        "key": "5",
         "name": "Password Generator",
         "subtitle": "An essential tool for generating strong, randomized passwords. Ideal for employees seeking secure password creation.",
         "screenShot": "/Images/passwordGenerator.png",
-        "more": "https://amirlasalle.github.io/password_generator/"
+        "deployment":"https://amirlasalle.github.io/password_generator/",
+        "github":"https://github.com/Amirlasalle/password_generator"
     },
     {
+        "key": "6",
         "name": "Work Day Scheduler",
         "subtitle": "Simplify your day with this user-friendly calendar app. Plan and save events for each working hour from 9 am to 5 pm, boosting your productivity.",
         "screenShot": "/Images/workDayScheduler.png",
-        "more": "https://amirlasalle.github.io/work_scheduler/"
+        "deployment":"https://amirlasalle.github.io/work_scheduler/",
+        "github":"https://github.com/Amirlasalle/work_scheduler"
     },
     {
+        "key": "7",
         "name": "Note Taker APP",
         "subtitle": "A versatile application for jotting down and saving your notes, ensuring that your important thoughts and ideas are never lost.",
         "screenShot": "/Images/noteTakerApp.png",
-        "more": "https://glacial-cliffs-13260.herokuapp.com/"
+        "deployment":"https://glacial-cliffs-13260.herokuapp.com/",
+        "github":"https://github.com/Amirlasalle/express.js-note-taker"
+    },
+    {
+        "key": "8",
+        "name":"My First HTML Portfolio",
+        "subtitle":"Explore a beautifully designed portfolio created using HTML and CSS, showcasing a range of skills and projects. first portfolio ever made!",
+        "screenShot":"/images/htmlPortfolio.png",
+        "deployment":"https://amirlasalle.github.io/Amirs_Portfolio/",
+        "github":"https://github.com/Amirlasalle/Amirs_PortfolioLinks/"
     }
 ]

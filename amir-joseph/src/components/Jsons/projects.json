@@ -1,47 +1,55 @@
 [
     {
+        "id": "0",
         "name": "Venture Villa",
         "subtitle": "A comprehensive FullStack application providing the ultimate travel guide experience for exploring the wonders of Colombia.",
         "screenShot": "/Images/venture-villa-logo.png",
         "more": "https://venture-villa-app-f0af34deb85d.herokuapp.com/"
     },
     {
+        "id": "1",
         "name": "ASCO Study Center",
         "subtitle": "React APP tailored for the SDPs at ASCO designed to facilitate knowledge acquisition and information access.",
         "screenShot": "/Images/sdp-screenshot.png",
         "more": "https://amirlasalle.github.io/asco-study-center/"
     },
     {
+        "id": "2",
         "name": "Group Awesome's Movie Generator",
         "subtitle": "Discover the world of cinema with ease. This app empowers you to access information on your favorite movies, check nearby theaters, and access showtime schedules.",
         "screenShot": "/Images/groupAwesomeMovieApp.png",
         "more": "https://pvlln.github.io/project1-group-awesome/"
     },
     {
+        "id": "3",
         "name": "Mealy App",
         "subtitle": "Stay organized and plan your meals efficiently with the Mealy App. Simplify your weekly meal scheduling for a stress-free dining experience.",
         "screenShot": "/Images/mealyApp.png",
         "more": "https://mealy-app-dcae3e02089d.herokuapp.com/login"
     },
     {
+        "id": "4",
         "name": "Weather Dashboard",
         "subtitle": "Experience real-time weather updates for major and minor cities with this weather dashboard, powered by a third-party API.",
         "screenShot": "/Images/weatherApp.png",
         "more": "https://amirlasalle.github.io/weather_dashboard/"
     },
     {
+        "id": "5",
         "name": "Password Generator",
         "subtitle": "An essential tool for generating strong, randomized passwords. Ideal for employees seeking secure password creation.",
         "screenShot": "/Images/passwordGenerator.png",
         "more": "https://amirlasalle.github.io/password_generator/"
     },
     {
+        "id": "6",
         "name": "Work Day Scheduler",
         "subtitle": "Simplify your day with this user-friendly calendar app. Plan and save events for each working hour from 9 am to 5 pm, boosting your productivity.",
         "screenShot": "/Images/workDayScheduler.png",
         "more": "https://amirlasalle.github.io/work_scheduler/"
     },
     {
+        "id": "7",
         "name": "Note Taker APP",
         "subtitle": "A versatile application for jotting down and saving your notes, ensuring that your important thoughts and ideas are never lost.",
         "screenShot": "/Images/noteTakerApp.png",

@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
-// import { Link, useNavigate } from 'react-router-dom';useContext Accordion, useAccordionButton, AccordionContext, Button,faChevronDown, faChevronUp,
 import '../App.css'
 import '../index.css'
 import projectsData from "../components/Jsons/projects.json";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronCircleRight, faChevronCircleLeft } from '@fortawesome/free-solid-svg-icons';
-import { Container, Card,  Image } from 'react-bootstrap';
+import { Container, Card, Image } from 'react-bootstrap';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -15,31 +14,7 @@ import { BsFillPatchCheckFill } from "react-icons/bs";
 const Experiences = () => {
 
     const [projects] = useState(projectsData);
-    // const UP = <FontAwesomeIcon icon={faChevronUp} size="lg" className='up-to-down' />;
-    // const DOWN = <FontAwesomeIcon icon={faChevronDown} size="lg" className='down-to-up' />;
 
-    // function ContextAwareToggle({ children, eventKey, callback }) {
-    //     const { activeEventKey } = useContext(AccordionContext);
-
-    //     const decoratedOnClick = useAccordionButton(
-    //         eventKey,
-    //         () => callback && callback(eventKey),
-    //     );
-
-    //     const isCurrentEventKey = activeEventKey === eventKey;
-
-    //     return (
-    //         <Button
-    //             type="button"
-    //             style={{ backgroundColor: isCurrentEventKey ? 'white' : 'rgb(4, 14, 158)' }}
-    //             onClick={decoratedOnClick}
-    //             className='offer-icon'
-    //         >
-    //             {isCurrentEventKey ? UP : DOWN}
-    //             {children}
-    //         </Button>
-    //     );
-    // }
 
     const settings = {
         className: "slider variable-width",
@@ -57,10 +32,10 @@ const Experiences = () => {
     return (
         <div className="home mb-25 justify-center">
             <div className='mt-5 mb-5 pb-5'>
-                <h4 className='pl-5 primary-text'>
+                <h4 className='pl-10 primary-text'>
                     My Skills <span className='text-white'>&</span>
                 </h4>
-                <h1 className='pl-4'>
+                <h1 className='pl-10'>
                     Experiences
                 </h1>
             </div>
@@ -157,50 +132,39 @@ const Experiences = () => {
                     </div>
                 </div>
             </div>
-            {/* <Container>
-                <div className='mt-1 about-img'>
-                    <Row className=''>
-                        <div className='about-text'>
-                            <p className='d-flex flex-column justify-center about-para pl-0'>
-                                👋 Hi, I'm Amir, a passionate Software Developer specializing in fullstack software development. With 2+ years of coding experience, I've crafted solutions for projects like Venture Villa. I'm on a constant quest for clean code and elegant solutions. Let's turn your ideas into functional reality together!
-                            </p>
-                        </div>
-                    </Row>
-                </div>
-            </Container> */}
 
 
 
             <Container fluid secondary="true" className="d-flex flex-wrap justify-center mt-20 p-10">
 
-                            <div className='header-content pb-2'>
-                         
-                                <h4 id="category-title" className="category-title text-center align-center">
-                                    Experience the Live Deployments of My Latest Projects
-                                </h4>
-                            </div>
-                            <div className='header-content'>
-                            <p className='text-light text-small justify-center align-center'>(hover for description)</p>
-                            </div>
-                                <div className='slider-body blur2 mt-10'>
-                                    <Slider {...settings} >
-                                        {projects.map((project, key) => (
-                                            <a href={project.more} target="_blank" rel="noreferrer" className="btn1" >
-                                                   <Card key={key} className="project-card" >
-                                                    <Card.Body className='w-100'>
-                                                        <Image src={process.env.PUBLIC_URL + project.screenShot} />
-                                                        <Card.Subtitle className="mb-2 project-text">
-                                                            <h4 className='pl-0 text-black'>
-                                                            {project.name}</h4>
-                                                            <span>{project.subtitle}</span>
-                                                            </Card.Subtitle>
-                                                    </Card.Body>
-                                                </Card>
-                                            </a>
-                                        ))}
-                                    </Slider>
-                                </div>
-                        
+                <div className='header-content pb-2'>
+
+                    <h4 id="category-title" className="category-title text-center align-center">
+                        Experience the Live Deployments of My Latest Projects
+                    </h4>
+                </div>
+                <div className='header-content'>
+                    <p className='text-light text-small justify-center align-center'>(hover for description)</p>
+                </div>
+                <div className='slider-body blur2 mt-10 pr-5 pl-5'>
+                    <Slider {...settings} >
+                        {projects.map((project, id) => (
+                            <a key={id} href={project.more} target="_blank" rel="noreferrer" className="btn1" >
+                                <Card className="project-card" >
+                                    <Card.Body className='w-100'>
+                                        <Image src={process.env.PUBLIC_URL + project.screenShot}  className='img-border'/>
+                                        <Card.Subtitle className="mb-2 project-text">
+                                            <h4 className='pl-0 text-black'>
+                                                {project.name}</h4>
+                                            <span>{project.subtitle}</span>
+                                        </Card.Subtitle>
+                                    </Card.Body>
+                                </Card>
+                            </a>
+                        ))}
+                    </Slider>
+                </div>
+
             </Container>
         </div>
     );

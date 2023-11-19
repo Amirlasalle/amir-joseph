@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Container, Col, Card  } from 'react-bootstrap';
+import { Container, Card  } from 'react-bootstrap';
 import '../App.css'
 import '../index.css'
 import servicesData from "../components/Jsons/services.json";
@@ -14,7 +14,7 @@ function Services() {
 
   return (
     <div className="container header_container justify-center">
-      <Container fluid secondary="true" className="d-flex flex-wrap justify-content-around p-10">
+      <Container fluid secondary="true" className="d-flex flex-wrap justify-content-around p-10 pb-20">
 
 
           <h5 className='pl-5 text-primary'>
@@ -25,7 +25,7 @@ function Services() {
           </h2>
           <div id="ServicesCards" className="d-flex flex-wrap justify-content-center W-100 services__container">
             {services.map((service, key) =>
-              <Col size={12} sm={12} md={12}>
+           
                 <Card key={key} className="m-2 service " style={{ maxWidth: '100vw' }}>
                   <Card.Header className='service__head text-center'>{service.header}</Card.Header>
                   <Card.Body className='w-100 mt-2 ml-0 mr-0 '>
@@ -38,7 +38,6 @@ function Services() {
                   </Card.Body>
 
                 </Card>
-         </Col>
             )}
           </div>
 

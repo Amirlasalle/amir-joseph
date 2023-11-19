@@ -1,35 +1,41 @@
 [
     {
+        "key": "0",
         "title": "Experience",
         "linkTo": "/experiences",
         "subtitle": "Explore my expertise and accomplishments",
         "icon": "&#127942;"
     },
     {
+        "key": "1",
         "title": "Clients",
         "linkTo": "/testimonials",
         "subtitle": "2+ Very Satisfied Clients",
         "icon": "&#128101;"
     },
     {
+        "key": "2",
         "title": "Projects",
         "linkTo": "/portfolio",
         "subtitle": "30+ Completed Projects",
         "icon": "&#128193;"
     },
     {
+        "key": "3",
         "title": "Resume",
         "linkTo": "/resume",
         "subtitle": "4+ Years of Work Experience",
         "icon": "&#128196;"
     },
     {
+        "key": "4",
         "title": "Testimonials",
         "linkTo": "/testimonials",
         "subtitle": "See what my network has to say about me!",
         "icon": "&#128483;"
     },
     {
+        "key": "5",
         "title": "Hobbies",
         "linkTo": "/hobbies",
         "subtitle": "Get to know what I love to do outside my profession",

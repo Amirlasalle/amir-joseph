@@ -581,6 +581,35 @@ a:hover {
 .min-100-vw {
   min-width: 100vw;
 }
+.h-100 {
+  height: 100vh;
+}
+
+.h-90 {
+  height: 90vh;
+}
+
+.h-80 {
+  height: 80vh;
+}
+
+.h-75 {
+  height: 75vh;
+}
+
+.h-70 {
+  height: 70vh;
+}
+
+.h-50 {
+  height: 50vh;
+}
+
+.h-25 {
+  height: 25vh;
+}
+
+
 
 /* MARGIN/PADDING UTILS */
 /* Margin - all sides */
@@ -972,6 +1001,19 @@ a:hover {
   padding-right: 1.625rem !important;
 }
 
+.pr-10 {
+  padding-right: 3.5rem !important;
+}
+
+.pr-15 {
+  padding-right: 8.875rem !important;
+}
+
+.pr-20 {
+  padding-right: 6.5rem !important;
+}
+
+
 /* padding-left */
 .pl-0 {
   padding-left: 0 !important;
@@ -995,6 +1037,18 @@ a:hover {
 
 .pl-5 {
   padding-left: 1.625rem !important;
+}
+
+.pl-10 {
+  padding-left: 3.5rem !important;
+}
+
+.pl-15 {
+  padding-left: 8.875rem !important;
+}
+
+.pl-20 {
+  padding-left: 6.5rem !important;
 }
 
 /* padding - x axis */

@@ -1,41 +1,40 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
 import '../App.css'
 import '../index.css'
-import projectsData from "../components/Jsons/projects.json";
-import { Image, Container, Col, Card, Row, Carousel, Tab, Tabs, Button, Modal } from 'react-bootstrap';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronCircleRight, faChevronCircleLeft, faChevronLeft, faChevronRight, faExternalLinkAlt, faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
+import projectspageData from "../components/Jsons/projectspage.json";
+import { Image, Container, Button, Card } from 'react-bootstrap';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faChevronCircleRight, faChevronCircleLeft, faChevronLeft, faChevronRight, faExternalLinkAlt, faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 
 function Portfolio() {
 
 
-  const chevIconStyle = {
-    fontSize: '2.5rem',
-  };
-  const navigate = useNavigate();
+  // const chevIconStyle = {
+  //   fontSize: '2.5rem',
+  // };
+  // const navigate = useNavigate();
 
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'auto',
-    });
-  };
-
-
-  const handleNavLinkClick = (url) => {
-    scrollToTop();
-    navigate(url);
-  };
-
-  const [projects] = useState(projectsData);
+  // const scrollToTop = () => {
+  //   window.scrollTo({
+  //     top: 0,
+  //     behavior: 'auto',
+  //   });
+  // };
 
 
+  // const handleNavLinkClick = (url) => {
+  //   scrollToTop();
+  //   navigate(url);
+  // };
 
-  const [show, setShow] = useState(false);
+  const [projectspage] = useState(projectspageData);
 
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+
+
+  // const [show, setShow] = useState(false);
+
+  // const handleClose = () => setShow(false);
+  // const handleShow = () => setShow(true);
 
 
 
@@ -54,47 +53,42 @@ function Portfolio() {
         </div>
 
 
-          {/* <div className='header-content pb-2 pt-10'>
 
-            <h4 id="category-title" className="category-title text-center align-center">
-              Experience the Live Deployments of My Latest Projects
-            </h4>
-          </div> */}
           <div className='header-content pt-5'>
             <p className='text-light text-small justify-center align-center'>(hover for description)</p>
           </div>
 
 
-        <Container fluid secondary="true" className="pb-15 d-flex flex-wrap justify-center  portfolio-cards__container">
+        <Container fluid secondary="true" className="pb-15 p-3 d-flex flex-wrap justify-center  portfolio-cards__container">
 
 
 
-          {projects.map((project, key) => (
-            <div key={key} className=' justify-center p-2'>
-              <Card className="project-card mx-auto" >
+          {projectspage.map((projects, key) => (
+            <div key={key} className='card-body-bg justify-center '>
+              <Card className="project-page-card mx-auto" >
                 <Card.Body className='w-100'>
-                  <Image src={process.env.PUBLIC_URL + project.screenShot} />
+                  <Image src={process.env.PUBLIC_URL + projects.screenShot} className='img-border'/>
                   <Card.Subtitle className="mb-2 project-text">
                     <h4 className='pl-0 text-black'>
-                      {project.name}</h4>
-                    <span>{project.subtitle}</span>
+                      {projects.name}</h4>
+                    <span>{projects.subtitle}</span>
                   </Card.Subtitle>
 
                 </Card.Body>
 
               </Card>
           
-              <a href={project.github} target="_blank" rel="noreferrer" className="" >
+              <a href={projects.github} target="_blank" rel="noreferrer" className="" >
                         <Button className='justify-center btn7 btn-bg m-1 mx-auto'>
 
-                        Github <br></br>Repository
+                        Github<br></br>Repository
 
                         </Button>
                     </a>
-                    <a href={project.deployment} target="_blank" rel="noreferrer" className="" >
+                    <a href={projects.deployment} target="_blank" rel="noreferrer" className="" >
                         <Button className='btn7 ml-1 mx-auto btn-primary '>
 
-                        Live <br></br>Deployment
+                        Live<br></br>Deployment
 
                         </Button>
                     </a>
