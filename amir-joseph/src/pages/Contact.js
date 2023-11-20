@@ -73,7 +73,7 @@ const Contact = () => {
     prevArrow: <CustomPrevArrow />
   };
 
-
+  const [hoveredIndex, setHoveredIndex] = useState(null);
 
   return (
 
@@ -119,8 +119,16 @@ const Contact = () => {
           <div className='contact-slider-body mt-5 '>
             <Slider {...settings} >
               {socialmedia.map((social, id) => (
-                <a key={id} href={social.more} target="_blank" rel="noreferrer" className="btn1" >
-                  <Card className="contact-card" >   <Image src={process.env.PUBLIC_URL + social.screenshot} className='contact-img img-fluid d-flex flex-wrap justify-content-around cards-image' />
+                <a key={id}
+                  href={social.more}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="btn1" >
+                  <Card className="contact-card">
+                    <Image
+                      src={process.env.PUBLIC_URL + social.screenshot}
+                      className='contact-img img-fluid d-flex flex-wrap justify-content-around cards-image'
+                    />
                     <Card.Body className=''>
 
                       <Card.Subtitle className="mb-2 contact-text">
@@ -231,8 +239,15 @@ const Contact = () => {
         <Container fluid secondary="true" className="pb-15 p-3 d-flex flex-wrap justify-center  portfolio-cards__container">
           <div className='justify-center '>
             {socialmedia.map((social, id) => (
-              <a key={id} href={social.more} target="_blank" rel="noreferrer" className="btn1" >
-                <Card className="contact-card" >   <Image src={process.env.PUBLIC_URL + social.screenshot} className='contact-img img-fluid d-flex flex-wrap justify-content-around cards-image' />
+              <a key={id}
+                href={social.more}
+                target="_blank"
+                rel="noreferrer"
+                className="btn1">
+                <Card className="contact-card" >
+                  <Image src={process.env.PUBLIC_URL + social.screenshot}
+                    className='contact-img img-fluid d-flex flex-wrap justify-content-around cards-image'
+                  />
                   <Card.Body className=''>
 
                     <Card.Subtitle className="mb-2 project-text">
@@ -249,19 +264,39 @@ const Contact = () => {
       </Row>
 
 
- <Row className='m-10 mb-25'>
-      <Container fluid secondary="true" className=" justify-around d-flex flex-wrap w-100 mb-20">
-        <div className="card-circle-container">
-          {socialmedia.map((social, id) => (
-            <a key={id} href={social.more} target="_blank" rel="noreferrer" className="btn1">
-              <div className="card-circles">
-                <Image src={process.env.PUBLIC_URL + social.screenshot} className='circles-image' alt={`Social Media Icon ${id}`} />
+      <Row className='m-10 mb-25'>
+        <Container fluid secondary="true" className=" justify-around d-flex flex-wrap w-100 mb-20">
+          <div className="card-circle-container">
+            {socialmedia.map((social, id) => (
+              <div className='a'>
+                <a key={id} href={social.more}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="btn1"
+                  onMouseEnter={() => setHoveredIndex(id)}
+                  onMouseLeave={() => setHoveredIndex(null)}
+                >
+                  <div className="card-circles">
+                    <Image
+                      src={process.env.PUBLIC_URL + social.screenshot}
+                      className='circles-image'
+                      alt={`Social Media Icon ${id}`} />
+                  </div>
+                </a>
+               
+                  <div className={`contact-text-card ${hoveredIndex === id ? 'show' : ''}`}>
+                    <div className="contact-text">
+                      <h4 className='pl-0 text-black'>
+                        {social.name}</h4>
+                      <p>{social.subtitle}</p>
+                    </div>
+                  </div>
+           
               </div>
-            </a>
-          ))}
-        </div>
-      </Container>
-    </Row>
+            ))}
+          </div>
+        </Container>
+      </Row>
 
     </div>
   );
