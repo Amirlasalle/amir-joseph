@@ -32,15 +32,15 @@ const Experiences = () => {
     return (
         <div className="home mb-25 justify-center">
             <div className='mt-5 mb-5 pb-5'>
-                <h4 className='pl-10 primary-text'>
+                <h4 className='primary-text text-center'>
                     My Skills <span className='text-white'>&</span>
                 </h4>
-                <h1 className='pl-10'>
+                <h1 className='text-center'>
                     Experiences
                 </h1>
             </div>
 
-            <div className='container experience__container'>
+            <div className='container experience__container  p-10'>
                 <div className='experience__frontend'>
                     <h4 className='pl-0'>Frontend Development</h4>
 
@@ -146,12 +146,12 @@ const Experiences = () => {
                 <div className='header-content'>
                     <p className='text-light text-small justify-center align-center'>(hover for description)</p>
                 </div>
-                <div className='slider-body blur2 mt-10 pr-5 pl-5'>
+                <div className='slider-body-projects blur2 mt-10 '>
                     <Slider {...settings} >
                         {projects.map((project, id) => (
                             <a key={id} href={project.more} target="_blank" rel="noreferrer" className="btn1" >
                                 <Card className="project-card" >
-                                    <Card.Body className='w-100'>
+                                    <Card.Body className=''>
                                         <Image src={process.env.PUBLIC_URL + project.screenShot}  className='img-border'/>
                                         <Card.Subtitle className="mb-2 project-text">
                                             <h4 className='pl-0 text-black'>

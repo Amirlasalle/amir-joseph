@@ -1268,6 +1268,30 @@ a:hover {
   border-color: transparent;
 }
 
+.btn8 {
+  text-align: center;
+  display: inline-block;
+  z-index: 1 !important;
+  padding: 0.85rem 0px !important;
+  margin-right: .375rem!important;
+  margin-left: .375rem !important;
+  text-decoration: none;
+  font-size: 1rem;
+  border-radius: 0.4rem;
+  border: 2px solid var(--color-primary) !important;
+  outline: none;
+  color: var(--color-primary);
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.btn8:hover {
+  background: var(--color-white);
+  color: var(--color-bg);
+  border: 2px solid var(--color-white) !important;
+}
+
 .btn {
   text-align: center;
   display: inline-block;
@@ -1320,7 +1344,7 @@ a:hover {
   width: 100%;
   display: block;
   text-align: center;
-  z-index: 999 !important;
+  z-index: 1 !important;
 }
 
 .btn.btn-primary {

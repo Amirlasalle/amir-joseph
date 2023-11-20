@@ -46,7 +46,7 @@ const HomePage = () => {
                     Amir Mohamed
                 </h1>
                 <h5 className='pl-0 text-light text-center'>
-                    Fullstack Developer
+                    Fullstack Software Developer
                 </h5>
                 <div className=' button-container justify-center'>
                     <a href={CV} download className='justify-center'>
@@ -69,17 +69,17 @@ const HomePage = () => {
             </div>
 
 
-            <div className='home__container p-5'>
+            <div className='home__container p-5 justify-center mb-20'>
 
-                <div className='home__me ml-10 mr-5 mb-20'>
-                <HeaderSocials />
-
-                    <div className='home__me-image'>
-
-                        <Image src={ME} alt='me' className='home-img' thumbnail />
-
-                    </div>
+                <div className='home__me ml-10 mr-5 '>
+                    <HeaderSocials />
                 </div>
+                <div className='home__me-image'>
+
+                    <Image src={ME} alt='me' className='home-img' thumbnail />
+
+                </div>
+
             </div>
 
 

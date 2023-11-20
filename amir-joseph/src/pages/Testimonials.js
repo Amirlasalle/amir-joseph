@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../App.css'
 import '../index.css'
 import testimonialsData from "../components/Jsons/testimonials.json";
@@ -14,6 +14,38 @@ const Testimonials = () => {
 
   const [testimonials] = useState(testimonialsData);
 
+  // var dnone = window.matchMedia("(max-width: 650px)")
+  // myFunction(dnone) 
+  // dnone.addListener(myFunction)
+  // function myFunction(tprops) {
+  //   if (tprops.matches) {
+  //     document.body.style.display = "none";
+  //   } else {
+  //     document.body.style.display = "block";
+  //   }
+  // }
+
+  useEffect(() => {
+    const handleResize = () => {
+      const nextArrow = document.querySelector('.t-slider_arrow-next');
+      const prevArrow = document.querySelector('.t-slider_arrow-prev');
+
+      if (window.innerWidth <= 650) {
+        nextArrow.style.display = 'none';
+        prevArrow.style.display = 'none';
+      } else {
+        nextArrow.style.display = 'block';
+        prevArrow.style.display = 'block';
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+    handleResize(); 
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   const settings = {
     className: "slider variable-width",
@@ -24,17 +56,17 @@ const Testimonials = () => {
     slidesToScroll: 1,
     variableWidth: true,
     dotsClass: "button__bar",
-    nextArrow: <CustomNextArrow />,
-    prevArrow: <CustomPrevArrow />
+    nextArrow: <TeNextArrow />,
+    prevArrow: <TePrevArrow />
   };
 
   return (
     <div className="home mb-25 justify-center">
       <div className='mt-5 pb-5'>
-        <h4 className='pl-10 primary-text'>
+        <h4 className='primary-text text-center'>
           What Others Have to Say
         </h4>
-        <h1 className='pl-10'>
+        <h1 className='text-center'>
           Testimonials
         </h1>
       </div>
@@ -71,26 +103,28 @@ const Testimonials = () => {
   );
 };
 
-function CustomNextArrow(props) {
-  const { className, style, onClick } = props;
+function TeNextArrow(tprops) {
+  const { className, style, onClick } = tprops;
   return (
     <FontAwesomeIcon icon={faChevronCircleRight} size="lg"
-      className={`arrow ${className}`}
-      style={{ ...style, display: "block" }}
+      className={`t-slider_arrow-next ${className}`}
+      style={{ ...style, display: "none" }}
       onClick={onClick}
     />
   );
 }
 
-function CustomPrevArrow(props) {
-  const { className, style, onClick } = props;
+function TePrevArrow(tprops) {
+  const { className, style, onClick } = tprops;
   return (
     <FontAwesomeIcon icon={faChevronCircleLeft} size="lg"
-      className={`arrow ${className}`}
-      style={{ ...style, display: "block" }}
+      className={`t-slider_arrow-prev ${className}`}
+      style={{ ...style, display: "none" }}
       onClick={onClick}
     />
   );
+
+  
 
 };
 

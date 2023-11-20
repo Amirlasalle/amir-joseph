@@ -86,13 +86,12 @@ const AboutMe = () => {
                     </div>
                 </div>
 
-                <Container fluid secondary="true" className="ml-20 mr-2 justify-around d-flex flex-wrap w-90 hide-it-750 blur">
+                <Container fluid secondary="true" className="ml-20 mr-2 justify-around p-5 d-flex flex-wrap w-90 hide-it-750 blur">
                     <div className='slider-body mt-5 '>
                         <Slider {...settings} >
                             {aboutmecards.map((aboutmecard, key) => (
                                 <Card key={key} className="about-cards-shadow mt-5" >
                                     <Link to={aboutmecard.linkTo} onClick={() => handleNavLinkClick(aboutmecard.linkTo)}>
-                                        {/* <Link to={aboutmecard.linkTo} target="_blank" rel="noreferrer" className="no-decoration"> */}
                                         <Card.Body className='w-100 mt-2 ml-0 mr-0'>
                                             <Card.Title className="mb-2 about-card-title text-white text-xx-large" dangerouslySetInnerHTML={{ __html: aboutmecard.icon }}>
                                             </Card.Title>
