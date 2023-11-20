@@ -42,12 +42,12 @@ const Contact = () => {
         },
         body: JSON.stringify(formDetails),
       });
-  
-      let result = await response.json(); 
-  
+
+      let result = await response.json();
+
       setButtonText("Send");
       setFormDetails(formInitialDetails);
-  
+
       if (result.code === 200) {
         setStatus({ success: true, message: ' Message sent successfully!' });
       } else {
@@ -76,7 +76,12 @@ const Contact = () => {
 
 
   return (
+
+
     <div className="container header__container justify-center">
+
+
+
       <div className='mt-5 mb-5 pb-5'>
         <h4 className='pl-5 primary-text'>
           Get In Touch
@@ -85,6 +90,8 @@ const Contact = () => {
           With Me
         </h1>
       </div>
+
+
       <Row className='m-10 show-it-800'>
         <Container fluid secondary="true" className=" justify-around d-flex flex-wrap w-100 show-it-800 blur">
           <div className='contact-slider-body mt-5 '>
@@ -131,84 +138,71 @@ const Contact = () => {
 
 
 
-        <Container fluid secondary="true" className="p-3 mb-20 justify-around form-container">
+        <Container fluid secondary="true" className="p-3 mb-25 justify-around form-container">
           <h3 className='text-center text-primary'>
-          Reach Out to Me Directly!
+            Reach Out to Me Directly!
           </h3>
           <div className='div-form px-3 py-1'>
-          <form onSubmit={handleSubmit}>
-            <Row>
-              <Col sm={6} className='px-1 py-1'>
-                <input
-                  type='text'
-                  value={formDetails.firstName}
-                  placeholder='First Name'
-                  onChange={(e) => onFormUpdate('firstName', e.target.value)}
-                />
-              </Col>
-              <Col sm={6} className='px-1 py-1'>
-                <input
-                  type='text'
-                  value={formDetails.lastName}
-                  placeholder='Last Name'
-                  onChange={(e) => onFormUpdate('lastName', e.target.value)}
-                />
-              </Col>
-              <Col sm={6} className='px-1 py-1'>
-                <input
-                  type='text'
-                  value={formDetails.email}
-                  placeholder='Email Address'
-                  onChange={(e) => onFormUpdate('email', e.target.value)}
-                />
-              </Col>
-              <Col sm={6} className='px-1 py-1'>
-                <input
-                  type='text'
-                  value={formDetails.phone}
-                  placeholder='Phone #'
-                  onChange={(e) => onFormUpdate('phone', e.target.value)}
-                />
-              </Col>
-              <Col className='w-100 px-1 py-1'>
-                <textarea rows='6'
-                  value={formDetails.message}
-                  placeholder="Type your questions or inquiries here, and I'll get back to you promptly!"
-                  onChange={(e) => onFormUpdate('message', e.target.value)}
-                />
-              </Col>
-              <Button type='submit' className=' btn-block btn8 btn-bg px-1 py-1'>
-                <span>{buttonText}</span>
-              </Button>
-           
+            <form onSubmit={handleSubmit}>
+              <Row>
+                <Col sm={6} className='px-1 py-1'>
+                  <input
+                    type='text'
+                    value={formDetails.firstName}
+                    placeholder='First Name'
+                    onChange={(e) => onFormUpdate('firstName', e.target.value)}
+                  />
+                </Col>
+                <Col sm={6} className='px-1 py-1'>
+                  <input
+                    type='text'
+                    value={formDetails.lastName}
+                    placeholder='Last Name'
+                    onChange={(e) => onFormUpdate('lastName', e.target.value)}
+                  />
+                </Col>
+                <Col sm={6} className='px-1 py-1'>
+                  <input
+                    type='text'
+                    value={formDetails.email}
+                    placeholder='Email Address'
+                    onChange={(e) => onFormUpdate('email', e.target.value)}
+                  />
+                </Col>
+                <Col sm={6} className='px-1 py-1'>
+                  <input
+                    type='text'
+                    value={formDetails.phone}
+                    placeholder='Phone #'
+                    onChange={(e) => onFormUpdate('phone', e.target.value)}
+                  />
+                </Col>
+                <Col className='w-100 px-1 py-1'>
+                  <textarea rows='6'
+                    value={formDetails.message}
+                    placeholder="Type your questions or inquiries here, and I'll get back to you promptly!"
+                    onChange={(e) => onFormUpdate('message', e.target.value)}
+                  />
+                </Col>
+                <Button type='submit' className=' btn-block btn8 btn-bg px-1 py-1'>
+                  <span>{buttonText}</span>
+                </Button>
+
                 <div className=''>
-                   {status.message && (
-                
-                  <p className={`success-status justify-center ${status.success === false ? "danger" : "success"}`}>
-                    {status.message}
-                  </p>
-              )}
+                  {status.message && (
+
+                    <p className={`success-status justify-center ${status.success === false ? "danger" : "success"}`}>
+                      {status.message}
+                    </p>
+                  )}
                 </div>
-            </Row>
-          </form>
+              </Row>
+            </form>
           </div>
         </Container>
       </div>
 
-      <div className='mt-5 justify-center d-flex flex-wrap'>
-          
-                <h5 className='pl-0 text-center '>
-                    Hello I'm
-                </h5>
-                <h1 className='pl-0 text-center'>
-                    Amir Mohamed
-                </h1>
-                <h5 className='pl-0 text-light text-center'>
-                    Fullstack Software Developer
-                </h5>
 
-
-            </div>
       {/* <Row className='mt-20 mb-25 show-it-800'>
         <Container fluid secondary="true" className=" justify-around d-flex flex-wrap w-100 show-it-800 blur">
           <div className='contact-slider-body mt-5 '>
@@ -236,23 +230,38 @@ const Contact = () => {
       <Row className='mb-10 mt-5 show-it-315'>
         <Container fluid secondary="true" className="pb-15 p-3 d-flex flex-wrap justify-center  portfolio-cards__container">
           <div className='justify-center '>
-              {socialmedia.map((social, id) => (
-                <a key={id} href={social.more} target="_blank" rel="noreferrer" className="btn1" >
-                  <Card className="contact-card" >   <Image src={process.env.PUBLIC_URL + social.screenshot} className='contact-img img-fluid d-flex flex-wrap justify-content-around cards-image' />
-                    <Card.Body className=''>
+            {socialmedia.map((social, id) => (
+              <a key={id} href={social.more} target="_blank" rel="noreferrer" className="btn1" >
+                <Card className="contact-card" >   <Image src={process.env.PUBLIC_URL + social.screenshot} className='contact-img img-fluid d-flex flex-wrap justify-content-around cards-image' />
+                  <Card.Body className=''>
 
-                      <Card.Subtitle className="mb-2 project-text">
-                        <h4 className='pl-0 text-black'>
-                          {social.name}</h4>
-                        <span>{social.subtitle}</span>
-                      </Card.Subtitle>
-                    </Card.Body>
-                  </Card>
-                </a>
-              ))}
+                    <Card.Subtitle className="mb-2 project-text">
+                      <h4 className='pl-0 text-black'>
+                        {social.name}</h4>
+                      <span>{social.subtitle}</span>
+                    </Card.Subtitle>
+                  </Card.Body>
+                </Card>
+              </a>
+            ))}
           </div>
         </Container>
       </Row>
+
+
+ <Row className='m-10 mb-25'>
+      <Container fluid secondary="true" className=" justify-around d-flex flex-wrap w-100 mb-20">
+        <div className="card-circle-container">
+          {socialmedia.map((social, id) => (
+            <a key={id} href={social.more} target="_blank" rel="noreferrer" className="btn1">
+              <div className="card-circles">
+                <Image src={process.env.PUBLIC_URL + social.screenshot} className='circles-image' alt={`Social Media Icon ${id}`} />
+              </div>
+            </a>
+          ))}
+        </div>
+      </Container>
+    </Row>
 
     </div>
   );
