@@ -39,9 +39,9 @@ const HomePage = () => {
 
             <div className='mt-5 justify-center d-flex flex-wrap'>
                 <SpinningLogo />
-                <h5 className='pl-0 text-center '>
+                <h4 className='pl-0 text-center text-primary'>
                     Hello I'm
-                </h5>
+                </h4>
                 <h1 className='pl-0 text-center'>
                     Amir Mohamed
                 </h1>

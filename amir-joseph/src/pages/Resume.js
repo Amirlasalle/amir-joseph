@@ -69,40 +69,51 @@ const HomePage = () => {
       </div>
 
 
-      <div className='home__container p-5 justify-center mb-20'>
+      {/* <div className='home__container p-5 justify-center mb-20'>
 
-        <div className='home__me ml-10 mr-5 '>
+        <div className='resume__me ml-10 mr-5 '>
           <HeaderSocials />
         </div>
-        <div className='home__me-image'>
-          {/* <iframe
-            height="1770px"
+        <div className='resume__me-image'>
+          <iframe
+            height="2200px"
             width="850px"
             title="resume"
-            src="https://docs.google.com/document/d/e/2PACX-1vTzu-Smi-LyK1ow6xl3Tw79V3V0Lt5ZOn-nrrlCOdq2LCsb0jh7SSJCOoy8T2s6bWQUqpB2ab91DWWD/pub?embedded=true" 
+            src={CV}
             className='resume-iframe'
-            /> */}
-          {/* <iframe
+          />
+
+
+        </div>
+
+      </div> */}
+<div className='home__container p-5 justify-center mb-20'>
+  <div className='resume__me ml-10 mr-5 '>
+    <HeaderSocials />
+  </div>
+  <div className='resume__me-image'>
+    <iframe
+      title="resume"
+      src={CV}
+      className='resume-iframe'
+    />
+  </div>
+</div>
+
+      {/* <iframe
             height="2150px"
             width="850px"
             title="resume"
             src="https://onedrive.live.com/embed?resid=EC63EF670676D710%2128526&amp;authkey=%21AM4hVx4namo2b60&amp;em=2"
             className='resume-iframe scroll-touch'
             /> */}
-          <iframe 
+      {/* <iframe 
           src="https://onedrive.live.com/embed?resid=EC63EF670676D710%2128526&amp;authkey=%21AM4hVx4namo2b60&amp;em=2" 
           height="2150px"
           width="850px"
           title="resume"
           frameborder="0" 
-          className='resume-iframe scroll-touch'/>
-          
-        </div>
-
-      </div>
-
-
-
+          className='resume-iframe scroll-touch'/> */}
 
     </div>
   );

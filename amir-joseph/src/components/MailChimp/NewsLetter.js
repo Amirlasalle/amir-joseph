@@ -28,7 +28,7 @@ const NewsLetter = ({ subscribe, status, message }) => {
             <div className='newsletter-box'>
                 <Row>
                     <Col lg={12} md={6} xl={5}>
-                        <h3>Subscribe to my Newsletter</h3>
+                        <h3>Subscribe to my Newsletter for the latest updates</h3>
                         <h6>dont worry I'm a One MAN TEAM, there will be no spams 😎</h6>
                         {status === 'sending' && <Alert>Sending...</Alert>}
                         {status === 'error' && <Alert variant='danger'>{message}</Alert>}

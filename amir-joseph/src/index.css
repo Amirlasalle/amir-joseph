@@ -1240,9 +1240,7 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* Optional: Center horizontally */
   height: 20vh;
-  /* Adjust the height as needed */
 }
 
 

@@ -1,4 +1,5 @@
-import { React, useState } from 'react'
+import { React, useState, useRef, useEffect } from 'react'
+import emailjs from 'emailjs-com'
 import '../App.css'
 import '../index.css'
 import socialmediaData from "../components/Jsons/socialmedia.json";
@@ -10,6 +11,10 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const Contact = () => {
+
+  const form = useRef();
+
+
 
   const [socialmedia] = useState(socialmediaData);
 
@@ -31,33 +36,44 @@ const Contact = () => {
       [catergory]: value
     })
   }
-  const handleSubmit = async (e) => {
+
+
+
+  const sendEmailAndSubmit = async (e) => {
     e.preventDefault();
+
+    if (!formDetails.firstName || !formDetails.lastName || !formDetails.email || !formDetails.phone || !formDetails.message) {
+      setStatus({ success: false, message: 'Please fill in all required fields.' });
+      return;
+    }
+
     setButtonText('Sending...');
+
     try {
-      let response = await fetch("http://localhost:5000/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "Application/json;charset=utf-8",
-        },
-        body: JSON.stringify(formDetails),
-      });
+      await emailjs.sendForm('service_3zrel1a', 'template_9cxik6p', form.current, 'paM4quWISkiQCnu1j');
 
-      let result = await response.json();
 
-      setButtonText("Send");
+      e.target.reset();
       setFormDetails(formInitialDetails);
 
-      if (result.code === 200) {
-        setStatus({ success: true, message: ' Message sent successfully!' });
-      } else {
-        setStatus({ success: false, message: ' Something went wrong, please try again later.' });
-      }
+      setButtonText('Send');
+      setStatus({ success: true, message: 'Message sent successfully!' });
     } catch (error) {
-      console.error('Error in fetch:', error);
-      setStatus({ success: false, message: ' An error occurred while sending the message.' });
+      console.error('Error:', error);
+      setButtonText('Send');
+      setStatus({ success: false, message: 'An error occurred while sending the message.' });
     }
   };
+
+
+  const clearStatus = () => {
+    setStatus({});
+  };
+
+  useEffect(() => {
+    const timer = setTimeout(clearStatus, 5000);
+    return () => clearTimeout(timer);
+  }, [status]);
 
 
   const settings = {
@@ -115,28 +131,26 @@ const Contact = () => {
         </Container>
       </Row>
       <div className='contact__container p-5'>
-   
+        <Row className='m-10 mb-25 hide-it-1024'>
+          <Container fluid secondary="true" className=" justify-around d-flex flex-wrap w-100 mb-20">
+            <div className="card-circle-container">
+              {socialmedia.map((social, id) => (
+                <div className='a'>
+                  <a key={id} href={social.more}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="btn1"
+                    onMouseEnter={() => setHoveredIndex(id)}
+                    onMouseLeave={() => setHoveredIndex(null)}
+                  >
+                    <div className="card-circles">
+                      <Image
+                        src={process.env.PUBLIC_URL + social.screenshot}
+                        className='circles-image'
+                        alt={`Social Media Icon ${id}`} />
+                    </div>
+                  </a>
 
-<Row className='m-10 mb-25 hide-it-1024'>
-        <Container fluid secondary="true" className=" justify-around d-flex flex-wrap w-100 mb-20">
-          <div className="card-circle-container">
-            {socialmedia.map((social, id) => (
-              <div className='a'>
-                <a key={id} href={social.more}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="btn1"
-                  onMouseEnter={() => setHoveredIndex(id)}
-                  onMouseLeave={() => setHoveredIndex(null)}
-                >
-                  <div className="card-circles">
-                    <Image
-                      src={process.env.PUBLIC_URL + social.screenshot}
-                      className='circles-image'
-                      alt={`Social Media Icon ${id}`} />
-                  </div>
-                </a>
-               
                   <div className={`contact-text-card ${hoveredIndex === id ? 'show' : ''}`}>
                     <div className="contact-text-card-text">
                       <h4 className='pl-0 text-black'>
@@ -144,24 +158,41 @@ const Contact = () => {
                       <p>{social.subtitle}</p>
                     </div>
                   </div>
-           
-              </div>
-            ))}
-          </div>
-        </Container>
-      </Row>
+
+                </div>
+              ))}
+            </div>
+          </Container>
+        </Row>
 
 
         <Container fluid secondary="true" className="p-3 mb-25 justify-around form-container">
           <h3 className='text-center text-primary'>
             Reach Out to Me Directly!
           </h3>
+
+          {status.success &&
+            <p className='text-center' style={{ color: 'white' }}>
+              {status.message}
+            </p>
+          }
+          {!status.success &&
+            status.message &&
+            <p className='text-center' style={{ color: 'red' }}>
+              {status.message}
+            </p>
+          }
+
+
           <div className='div-form px-3 py-1'>
-            <form onSubmit={handleSubmit}>
+            <form
+              ref={form}
+              onSubmit={sendEmailAndSubmit}
+            >
               <Row>
                 <Col sm={6} className='px-1 py-1'>
                   <input
-                    type='text'
+                    type="text" name="user_name"
                     value={formDetails.firstName}
                     placeholder='First Name'
                     onChange={(e) => onFormUpdate('firstName', e.target.value)}
@@ -177,7 +208,7 @@ const Contact = () => {
                 </Col>
                 <Col sm={6} className='px-1 py-1'>
                   <input
-                    type='text'
+                    type="email" name="user_email"
                     value={formDetails.email}
                     placeholder='Email Address'
                     onChange={(e) => onFormUpdate('email', e.target.value)}
@@ -198,47 +229,17 @@ const Contact = () => {
                     onChange={(e) => onFormUpdate('message', e.target.value)}
                   />
                 </Col>
-                <Button type='submit' className=' btn-block btn8 btn-bg px-1 py-1'>
+                <Button type="submit" value="Send"
+                  className='btn-block btn8 btn-bg px-1 py-1'>
                   <span>{buttonText}</span>
                 </Button>
-
-                <div className=''>
-                  {status.message && (
-
-                    <p className={`success-status justify-center ${status.success === false ? "danger" : "success"}`}>
-                      {status.message}
-                    </p>
-                  )}
-                </div>
               </Row>
+
+
             </form>
           </div>
         </Container>
       </div>
-
-
-      {/* <Row className='mt-20 mb-25 show-it-800'>
-        <Container fluid secondary="true" className=" justify-around d-flex flex-wrap w-100 show-it-800 blur">
-          <div className='contact-slider-body mt-5 '>
-            <Slider {...settings} >
-              {socialmedia.map((social, id) => (
-                <a key={id} href={social.more} target="_blank" rel="noreferrer" className="btn1" >
-                  <Card className="contact-card" >   <Image src={process.env.PUBLIC_URL + social.screenshot} className='contact-img img-fluid d-flex flex-wrap justify-content-around cards-image' />
-                    <Card.Body className=''>
-
-                      <Card.Subtitle className="mb-2 contact-text">
-                        <h4 className='pl-0 text-black'>
-                          {social.name}</h4>
-                        <span>{social.subtitle}</span>
-                      </Card.Subtitle>
-                    </Card.Body>
-                  </Card>
-                </a>
-              ))}
-            </Slider>
-          </div>
-        </Container>
-      </Row> */}
 
 
       <Row className='mb-10 mt-5 show-it-315'>
@@ -269,40 +270,6 @@ const Contact = () => {
         </Container>
       </Row>
 
-{/* 
-      <Row className='m-10 mb-25'>
-        <Container fluid secondary="true" className=" justify-around d-flex flex-wrap w-100 mb-20">
-          <div className="card-circle-container">
-            {socialmedia.map((social, id) => (
-              <div className='a'>
-                <a key={id} href={social.more}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="btn1"
-                  onMouseEnter={() => setHoveredIndex(id)}
-                  onMouseLeave={() => setHoveredIndex(null)}
-                >
-                  <div className="card-circles">
-                    <Image
-                      src={process.env.PUBLIC_URL + social.screenshot}
-                      className='circles-image'
-                      alt={`Social Media Icon ${id}`} />
-                  </div>
-                </a>
-               
-                  <div className={`contact-text-card ${hoveredIndex === id ? 'show' : ''}`}>
-                    <div className="contact-text-card-text">
-                      <h4 className='pl-0 text-black'>
-                        {social.name}</h4>
-                      <p>{social.subtitle}</p>
-                    </div>
-                  </div>
-           
-              </div>
-            ))}
-          </div>
-        </Container>
-      </Row> */}
 
     </div>
   );
@@ -332,32 +299,3 @@ function CustomPrevArrow(props) {
 };
 
 export default Contact
-
-     /* <Container fluid secondary="true" className=" mr-2 justify-around d-flex flex-wrap w-100 hide-it-800 blur">
-          <div className='contact-slider-body mt-5 '>
-            <Slider {...settings} >
-              {socialmedia.map((social, id) => (
-                <a key={id}
-                  href={social.more}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="btn1" >
-                  <Card className="contact-card">
-                    <Image
-                      src={process.env.PUBLIC_URL + social.screenshot}
-                      className='contact-img img-fluid d-flex flex-wrap justify-content-around cards-image'
-                    />
-                    <Card.Body className=''>
-
-                      <Card.Subtitle className="mb-2 contact-text">
-                        <h4 className='pl-0 text-black'>
-                          {social.name}</h4>
-                        <span>{social.subtitle}</span>
-                      </Card.Subtitle>
-                    </Card.Body>
-                  </Card>
-                </a>
-              ))}
-            </Slider>
-          </div>
-        </Container> */
