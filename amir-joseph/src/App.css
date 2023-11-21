@@ -1016,8 +1016,8 @@ nav a.active {
   border-radius: 1rem;
   overflow: hidden;
   margin-top: 2rem;
-  box-shadow: 2px 2px 7px 0 rgb(255, 255, 255),
-    0 1px 2px 0 rgb(255, 255, 255), rgba(10, 37, 64, 0.708) 0px -4px 10px 0px inset;
+  box-shadow: 5px 5px 10px 0 rgb(255, 255, 255),
+    0 1px 7px 0 rgb(255, 255, 255);
 }
 
 .contact-card::before {
@@ -1067,7 +1067,7 @@ nav a.active {
   color: var(--color-bg-variant);
 }
 
-.show-it-800 {
+.show-it-1024 {
   display: none;
 }
 
@@ -1108,12 +1108,30 @@ textarea {
   margin: 1rem 7rem;
 }
 
+
+/*  =============== RESUME ======== */
+
+.resume-iframe{
+  box-shadow: 5px 5px 10px 0 rgb(255, 255, 255),
+    0 1px 7px 0 rgb(255, 255, 255);
+    box-shadow: rgb(255, 255, 255) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  border: 1px solid transparent;
+  border-radius: 40px;
+  background: var(--color-white);
+  overflow: auto;
+}
+
+.scroll-touch {
+  -webkit-overflow-scrolling: touch; /* Lets it scroll lazy */
+}
+
 /*============= testing ============ */
 
 .card-circle-container {
+  margin-top: 5rem;
   position: relative;
   width: 100%;
-  height: 50vh;
+  height: 40vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1133,9 +1151,10 @@ textarea {
   height: 7rem;
   margin: 0;
   border-radius: 50%;
-  background: #3498db;
+  border: 0px solid transparent;
+  background: radial-gradient(circle at 100px 100px, #5cabff, #000);
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.349);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.551),  rgba(10, 37, 64, 0.708) 0px -4px 10px 0px inset;
   z-index: 3;
 }
 
@@ -1143,14 +1162,14 @@ textarea {
 .card-circles::after {
   content: '';
   position: absolute;
-  width: 100%;
-  height: 50%;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), transparent);
+  width: 50%;
+  height: 20%;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.085), transparent);
   border-radius: 50%;
 }
 
 .card-circles::after {
-  top: 50%;
+  top: 100%;
 }
 
 .card-circles:hover {
@@ -1160,7 +1179,7 @@ textarea {
 
 .card-circles:hover::before,
 .card-circles:hover::after {
-  height: 100%;
+  height: 20%;
 }
 
 .card-circle-container .a:nth-child(1) {
@@ -1240,8 +1259,10 @@ textarea {
 
 .card-circle-container .a:hover .contact-text-card {
   display: block;
-  box-shadow: 5px 5px 10px 0 rgb(255, 255, 255),
-  0 1px 7px 0 rgb(255, 255, 255);
+  /* box-shadow: 5px 5px 10px 0 rgb(255, 255, 255),
+  0 1px 7px 0 rgb(255, 255, 255); */
+  box-shadow: 2px 2px 7px 0 rgb(255, 255, 255),
+  0 1px 2px 0 rgb(255, 255, 255), rgba(10, 37, 64, 0.708) 0px -4px 10px 0px inset;
 }
 
 .contact-text-card::before {
@@ -1259,7 +1280,7 @@ textarea {
   height: 100%;
 }
 
-.contact-text {
+.contact-text-card-text {
   position: absolute;
   text-align: center;
   top: 50%;
@@ -1275,7 +1296,7 @@ textarea {
   opacity: 1;
 } */
 
-.contact-text h4 {
+.contact-text-card-text h4 {
   margin-top: 1rem;
   font-size: 0.9rem;
   font-weight: 900;
@@ -1284,7 +1305,7 @@ textarea {
   color: #000;
 }
 
-.contact-text p {
+.contact-text-card-text p {
   font-weight: bold;
   font-size: .6rem;
   letter-spacing: 0.5px;
@@ -1315,6 +1336,22 @@ textarea {
   .experience__content {
     padding: 1rem;
   }
+  .hide-it-1024 {
+    display: none;
+  }
+  .form-container {
+    padding: 0 !important;
+  }
+
+  .show-it-1024 {
+    display: block;
+  }
+
+  .contact__container {
+    justify-content: space-around;
+    display: flex;
+    gap: 0;
+  }
 
 }
 
@@ -1326,10 +1363,7 @@ textarea {
   }
 }
 
-@media screen and (max-width: 825px) {
-  .hide-it-800 {
-    display: none;
-  }
+/* @media screen and (max-width: 825px) {
 
   .form-container {
     padding: 0 !important;
@@ -1344,7 +1378,7 @@ textarea {
     display: flex;
     gap: 0;
   }
-}
+} */
 
 /* ================= MEDIA QUERIES (SMALL DEVICES) ====================== */
 
@@ -1505,13 +1539,10 @@ textarea {
     justify-content: center;
   }
 
-  .show-it-800 {
+  .show-it-1025 {
     display: none;
   }
 
-  .show-it-750 {
-    display: none;
-  }
 
   .form-container {
     padding: 0 !important;

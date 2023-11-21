@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import '../../App.css'
 import '../../index.css'
 import ME from '../assets/Images/about-pic.PNG'
-import CV from '../assets/CV/amir-resume.pdf'
+import CV from '../assets/CV/Amir-Mohamed-2023.pdf'
 import SpinningLogo from '../Logo/SpinningLogo'
 import HeaderSocials from './HomePageSocials'
 import { Button, Image } from 'react-bootstrap'

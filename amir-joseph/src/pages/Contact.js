@@ -92,8 +92,8 @@ const Contact = () => {
       </div>
 
 
-      <Row className='m-10 show-it-800'>
-        <Container fluid secondary="true" className=" justify-around d-flex flex-wrap w-100 show-it-800 blur">
+      <Row className='m-10 show-it-1024'>
+        <Container fluid secondary="true" className=" justify-around d-flex flex-wrap w-100 blur">
           <div className='contact-slider-body mt-5 '>
             <Slider {...settings} >
               {socialmedia.map((social, id) => (
@@ -115,35 +115,41 @@ const Contact = () => {
         </Container>
       </Row>
       <div className='contact__container p-5'>
-        <Container fluid secondary="true" className=" mr-2 justify-around d-flex flex-wrap w-100 hide-it-800 blur">
-          <div className='contact-slider-body mt-5 '>
-            <Slider {...settings} >
-              {socialmedia.map((social, id) => (
-                <a key={id}
-                  href={social.more}
+   
+
+<Row className='m-10 mb-25 hide-it-1024'>
+        <Container fluid secondary="true" className=" justify-around d-flex flex-wrap w-100 mb-20">
+          <div className="card-circle-container">
+            {socialmedia.map((social, id) => (
+              <div className='a'>
+                <a key={id} href={social.more}
                   target="_blank"
                   rel="noreferrer"
-                  className="btn1" >
-                  <Card className="contact-card">
+                  className="btn1"
+                  onMouseEnter={() => setHoveredIndex(id)}
+                  onMouseLeave={() => setHoveredIndex(null)}
+                >
+                  <div className="card-circles">
                     <Image
                       src={process.env.PUBLIC_URL + social.screenshot}
-                      className='contact-img img-fluid d-flex flex-wrap justify-content-around cards-image'
-                    />
-                    <Card.Body className=''>
-
-                      <Card.Subtitle className="mb-2 contact-text">
-                        <h4 className='pl-0 text-black'>
-                          {social.name}</h4>
-                        <span>{social.subtitle}</span>
-                      </Card.Subtitle>
-                    </Card.Body>
-                  </Card>
+                      className='circles-image'
+                      alt={`Social Media Icon ${id}`} />
+                  </div>
                 </a>
-              ))}
-            </Slider>
+               
+                  <div className={`contact-text-card ${hoveredIndex === id ? 'show' : ''}`}>
+                    <div className="contact-text-card-text">
+                      <h4 className='pl-0 text-black'>
+                        {social.name}</h4>
+                      <p>{social.subtitle}</p>
+                    </div>
+                  </div>
+           
+              </div>
+            ))}
           </div>
         </Container>
-
+      </Row>
 
 
         <Container fluid secondary="true" className="p-3 mb-25 justify-around form-container">
@@ -263,7 +269,7 @@ const Contact = () => {
         </Container>
       </Row>
 
-
+{/* 
       <Row className='m-10 mb-25'>
         <Container fluid secondary="true" className=" justify-around d-flex flex-wrap w-100 mb-20">
           <div className="card-circle-container">
@@ -285,7 +291,7 @@ const Contact = () => {
                 </a>
                
                   <div className={`contact-text-card ${hoveredIndex === id ? 'show' : ''}`}>
-                    <div className="contact-text">
+                    <div className="contact-text-card-text">
                       <h4 className='pl-0 text-black'>
                         {social.name}</h4>
                       <p>{social.subtitle}</p>
@@ -296,7 +302,7 @@ const Contact = () => {
             ))}
           </div>
         </Container>
-      </Row>
+      </Row> */}
 
     </div>
   );
@@ -326,3 +332,32 @@ function CustomPrevArrow(props) {
 };
 
 export default Contact
+
+     /* <Container fluid secondary="true" className=" mr-2 justify-around d-flex flex-wrap w-100 hide-it-800 blur">
+          <div className='contact-slider-body mt-5 '>
+            <Slider {...settings} >
+              {socialmedia.map((social, id) => (
+                <a key={id}
+                  href={social.more}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="btn1" >
+                  <Card className="contact-card">
+                    <Image
+                      src={process.env.PUBLIC_URL + social.screenshot}
+                      className='contact-img img-fluid d-flex flex-wrap justify-content-around cards-image'
+                    />
+                    <Card.Body className=''>
+
+                      <Card.Subtitle className="mb-2 contact-text">
+                        <h4 className='pl-0 text-black'>
+                          {social.name}</h4>
+                        <span>{social.subtitle}</span>
+                      </Card.Subtitle>
+                    </Card.Body>
+                  </Card>
+                </a>
+              ))}
+            </Slider>
+          </div>
+        </Container> */
