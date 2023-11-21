@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/amir-joseph/static/css/main.f201bc2b.css",
+    "main.js": "/amir-joseph/static/js/main.18d75e5e.js",
+    "static/js/787.a7e0c4da.chunk.js": "/amir-joseph/static/js/787.a7e0c4da.chunk.js",
+    "static/media/about-pic.PNG": "/amir-joseph/static/media/about-pic.c15cbf5041b22ee00d8b.PNG",
+    "static/media/ProPic.png": "/amir-joseph/static/media/ProPic.63a3c74f80c1c402c22d.png",
+    "static/media/fontawesome-webfont.svg?v=4.7.0": "/amir-joseph/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
+    "static/media/Amir-Mohamed-2023.pdf": "/amir-joseph/static/media/Amir-Mohamed-2023.cb22044c55a5ec6b6a80.pdf",
+    "static/media/fontawesome-webfont.eot": "/amir-joseph/static/media/fontawesome-webfont.8b43027f47b20503057d.eot",
+    "static/media/fontawesome-webfont.ttf?v=4.7.0": "/amir-joseph/static/media/fontawesome-webfont.1e59d2330b4c6deb84b3.ttf",
+    "static/media/fontawesome-webfont.woff?v=4.7.0": "/amir-joseph/static/media/fontawesome-webfont.f691f37e57f04c152e23.woff",
+    "static/media/fontawesome-webfont.woff2?v=4.7.0": "/amir-joseph/static/media/fontawesome-webfont.20fd1704ea223900efa9.woff2",
+    "static/media/logo.svg": "/amir-joseph/static/media/logo.cf749be5ae5a767f6aa9a0c127ef4fff.svg",
+    "static/media/logoTwo.svg": "/amir-joseph/static/media/logoTwo.1450949d52333e2bcc53fc6e322e2bdf.svg",
+    "static/media/slick.svg": "/amir-joseph/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/amir-joseph/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/amir-joseph/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/amir-joseph/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/amir-joseph/index.html",
+    "main.f201bc2b.css.map": "/amir-joseph/static/css/main.f201bc2b.css.map",
+    "main.18d75e5e.js.map": "/amir-joseph/static/js/main.18d75e5e.js.map",
+    "787.a7e0c4da.chunk.js.map": "/amir-joseph/static/js/787.a7e0c4da.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f201bc2b.css",
+    "static/js/main.18d75e5e.js"
+  ]
+}
