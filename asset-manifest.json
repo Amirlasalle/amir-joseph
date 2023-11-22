@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/amir-joseph/static/css/main.f201bc2b.css",
-    "main.js": "/amir-joseph/static/js/main.2a017eea.js",
+    "main.css": "/amir-joseph/static/css/main.5652f2c5.css",
+    "main.js": "/amir-joseph/static/js/main.f7a68715.js",
     "static/js/787.a7e0c4da.chunk.js": "/amir-joseph/static/js/787.a7e0c4da.chunk.js",
     "static/media/about-pic.PNG": "/amir-joseph/static/media/about-pic.c15cbf5041b22ee00d8b.PNG",
     "static/media/ProPic.png": "/amir-joseph/static/media/ProPic.63a3c74f80c1c402c22d.png",
@@ -18,12 +18,12 @@
     "static/media/slick.ttf": "/amir-joseph/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/amir-joseph/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/amir-joseph/index.html",
-    "main.f201bc2b.css.map": "/amir-joseph/static/css/main.f201bc2b.css.map",
-    "main.2a017eea.js.map": "/amir-joseph/static/js/main.2a017eea.js.map",
+    "main.5652f2c5.css.map": "/amir-joseph/static/css/main.5652f2c5.css.map",
+    "main.f7a68715.js.map": "/amir-joseph/static/js/main.f7a68715.js.map",
     "787.a7e0c4da.chunk.js.map": "/amir-joseph/static/js/787.a7e0c4da.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f201bc2b.css",
-    "static/js/main.2a017eea.js"
+    "static/css/main.5652f2c5.css",
+    "static/js/main.f7a68715.js"
   ]
 }
