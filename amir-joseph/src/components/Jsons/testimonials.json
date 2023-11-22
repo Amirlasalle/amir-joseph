@@ -3,35 +3,21 @@
         "id": "0",
         "name": "Angela Mosalca",
         "review": "Amir is not just a developer, He's  a creative problem-solver with a keen eye for detail, I'd absolutely reccomend him to do your website",
-        "avatar": "Assests/Images/angie.jpg",
+        "avatar": "../public/assests/images/angie.jpg",
         "more": ""
     },
     {
         "id": "1",
         "name": "Jared Biunno",
         "review": "I highly recommend Amir as a full-stack software developer. His seamless integration of front-end and back-end skills ensures the delivery of high-quality solutions. Amir is a valuable asset to any development project.",
-        "avatar": "assests/Images/angie.jpg",
+        "avatar": "assests/images/angie.jpg",
         "more": ""
     },
     {
         "id": "2",
-        "name": "Angela Mosalca",
+        "name": "Leonardo Pattuzzo",
         "review": "Amir is not just a developer, He's  a creative problem-solver with a keen eye for detail, I'd absolutely reccomend him to do your website",
-        "avatar": "Assests/Images/angie.jpg",
-        "more": ""
-    },
-    {
-        "id": "3",
-        "name": "Jared Biunno",
-        "review": "I highly recommend Amir as a full-stack software developer. His seamless integration of front-end and back-end skills ensures the delivery of high-quality solutions. Amir is a valuable asset to any development project.",
-        "avatar": "Assests/Images/jared.jpg",
-        "more": ""
-    },
-    {
-        "id": "4",
-        "name": "Angela Mosalca",
-        "review": "Amir is not just a developer, He's  a creative problem-solver with a keen eye for detail, I'd absolutely reccomend him to do your website",
-        "avatar": "Assests/Images/angie.jpg",
+        "avatar": "assests/images/jared.jpg",
         "more": ""
     }
 ]
