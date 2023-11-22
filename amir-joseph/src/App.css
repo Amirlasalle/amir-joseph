@@ -956,7 +956,6 @@ nav a.active {
   background: var(--color-white);
   margin-left: 3rem;
   overflow: visible;
-  /* box-sizing: content-box; */
   opacity: 1;
   margin-top: 0;
   border-radius: 50%;
@@ -1114,38 +1113,7 @@ textarea {
 
 /*  =============== RESUME ======== */
 
-/* .resume-iframe{
-  box-shadow: 5px 5px 10px 0 rgb(255, 255, 255),
-    0 1px 7px 0 rgb(255, 255, 255);
-    box-shadow: rgb(255, 255, 255) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-  border: 1px solid transparent;
-  border-radius: 40px;
-  background: transparent;
-  aspect-ratio: 1/1 !important;
-}
 
-.scroll-touch {
-  -webkit-overflow-scrolling: touch; 
-}
-.resume__me {
-  display: flex;
-  flex-direction: row;
-  justify-content: center !important;
-  align-items: center;
-  border: 1px solid transparent;
-  border-radius: 40px;
-  background: transparent;
-}
-
-.resume__me-image {
-  display: flex;
-  flex-direction: row;
-  justify-content: center !important;
-  align-items: center;
-  border: 1px solid transparent;
-  border-radius: 40px;
-  background: transparent;
-} */
 .resume-iframe {
   width: 100%;
   max-width: 850px;
@@ -1156,6 +1124,7 @@ textarea {
   border: 1px solid transparent;
   border-radius: 40px;
   background: transparent;
+  aspect-ratio: 1/1;
 }
 
 .scroll-touch {
@@ -1455,10 +1424,15 @@ textarea {
     padding: 2rem 1rem;
   }
 
+  .slick-arrow.slick-next,
+  .slick-arrow.slick-prev{
+    box-shadow: none;
+  }
+
 }
 
 @media screen and (max-width: 680px) {
-
+ 
   .logo-container {
     width: 5vh;
     height: 5vw;

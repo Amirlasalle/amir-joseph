@@ -85,12 +85,14 @@ const Testimonials = () => {
           <Slider {...settings} >
             {testimonials.map((testimonial, id) => (
                 <Card key={id}className="testimonial-card" >
-                  <Card.Body className=''>
+                  <Card.Body className='pl-0'>
                     <Image src={process.env.PUBLIC_URL + testimonial.avatar} className='avatar'/>
-                    <Card.Subtitle className="mb-2 p-1 testimonial-text">
+                    <Card.Subtitle className="mb-2 p-2 testimonial-text">
                       <h4 className='pl-0'>
                         {testimonial.name}</h4>
-                      <span>{testimonial.review}</span>
+                      <span className='pl-0'>{testimonial.review}</span> 
+                      <br></br>
+                      <span className='pl-0'>{testimonial.more}</span>
                     </Card.Subtitle>
                   </Card.Body>
                 </Card>

@@ -4,20 +4,20 @@
         "name": "Angela Mosalca",
         "review": "Amir is not just a developer, He's  a creative problem-solver with a keen eye for detail, I'd absolutely reccomend him to do your website",
         "avatar": "/images/angie.jpg",
-        "more": ""
+        "more": "- Corigin"
     },
     {
         "id": "1",
         "name": "Jared Biunno",
-        "review": "I highly recommend Amir as a full-stack software developer. His seamless integration of front-end and back-end skills ensures the delivery of high-quality solutions. Amir is a valuable asset to any development project.",
+        "review": "I highly recommend Amir as a Software Developer. His seamless integration of front and back end skills ensures the delivery of high quality solutions. Was fortunate to work with him.",
         "avatar": "/images/jared.jpg",
-        "more": ""
+        "more": "- Anheuser-Busch"
     },
     {
         "id": "2",
         "name": "Leonardo Pattuzzo",
-        "review": "Amir is not just a developer, He's  a creative problem-solver with a keen eye for detail, I'd absolutely reccomend him to do your website",
-        "avatar": "/images/ProPic.png",
-        "more": "Amir is a great guy to work with, very understanding, and never failed to complete a request I had for him."
+        "review": "Amir is a great guy to work with, very understanding, and never failed to complete a request I had for him.",
+        "avatar": "/images/leo-temp.jpeg",
+        "more": "- Patuzzo Carpentry"
     }
 ]
