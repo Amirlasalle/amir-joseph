@@ -1148,8 +1148,8 @@ textarea {
 .resume-iframe {
   width: 100%;
   max-width: 850px;
-  min-height: 900px; 
- max-height: 1500px;
+  min-height: 900px;
+  max-height: 1500px;
   padding-bottom: 0px;
   box-shadow: rgb(255, 255, 255) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
   border: 1px solid transparent;
@@ -1192,7 +1192,7 @@ textarea {
   align-items: center;
 }
 
-.card-circle-container .a{
+.card-circle-container .a {
   position: absolute;
   display: flex;
   justify-content: center;
@@ -1209,7 +1209,7 @@ textarea {
   border: 0px solid transparent;
   background: radial-gradient(circle at 100px 100px, #5cabff, #000);
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.551),  rgba(10, 37, 64, 0.708) 0px -4px 10px 0px inset;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.551), rgba(10, 37, 64, 0.708) 0px -4px 10px 0px inset;
   z-index: 3;
 }
 
@@ -1280,7 +1280,7 @@ textarea {
   border: 1px solid transparent;
   border-radius: 50%;
   overflow: hidden;
-  margin:0;
+  margin: 0;
   display: none;
   transition: var(--transition);
   z-index: 0;
@@ -1317,7 +1317,7 @@ textarea {
   /* box-shadow: 5px 5px 10px 0 rgb(255, 255, 255),
   0 1px 7px 0 rgb(255, 255, 255); */
   box-shadow: 2px 2px 7px 0 rgb(255, 255, 255),
-  0 1px 2px 0 rgb(255, 255, 255), rgba(10, 37, 64, 0.708) 0px -4px 10px 0px inset;
+    0 1px 2px 0 rgb(255, 255, 255), rgba(10, 37, 64, 0.708) 0px -4px 10px 0px inset;
 }
 
 .contact-text-card::before {
@@ -1391,9 +1391,11 @@ textarea {
   .experience__content {
     padding: 1rem;
   }
+
   .hide-it-1024 {
     display: none;
   }
+
   .form-container {
     padding: 0 !important;
   }
@@ -1456,14 +1458,14 @@ textarea {
   }
 
   .slick-arrow.slick-next,
-  .slick-arrow.slick-prev{
+  .slick-arrow.slick-prev {
     box-shadow: none;
   }
 
 }
 
 @media screen and (max-width: 680px) {
- 
+
   .logo-container {
     width: 5vh;
     height: 5vw;
@@ -1768,6 +1770,19 @@ textarea {
 @media screen and (max-width: 380px) {
   .t-slider {
     height: 27rem;
+  }
+
+  .resume-iframe {
+    width: 100%;
+    max-width: 950px;
+    min-height: 900px;
+    max-height: 2150px;
+    padding-bottom: 0px;
+    box-shadow: rgb(255, 255, 255) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    border: 1px solid transparent;
+    border-radius: 40px;
+    background: transparent;
+    z-index: 3;
   }
 
   .avatar {
